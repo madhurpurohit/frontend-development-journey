@@ -44,7 +44,7 @@ Each directory contains individual topics & projects with their own descriptions
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/madhurpurohit/frontend-development-journey.git
    ```
 2. **Install Dependencies** (only use this in react, tailwind css, major project & js library directories):
    ```bash
