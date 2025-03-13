@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch for Time</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Jost:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+        font-family: "Poppins", sans-serif, serif;
+        scroll-behavior: smooth;
+        color: #fff;
+      }
+
+      body {
+        background-image: linear-gradient(
+          to right,
+          rgb(71, 120, 189),
+          rgb(190, 94, 163)
+        );
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+
+      #root {
+        padding: 15px;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+      }
+
+      #days {
+        font-size: 80px;
+        font-weight: 600;
+      }
+
+      .day-para {
+        font-size: 20px;
+        margin: -20px 0 10px;
+        letter-spacing: 0.05rem;
+      }
+
+      #timing {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .time-in-hour,
+      .time-in-min {
+        margin-right: 15px;
+      }
+
+      .time-para {
+        font-size: 13px;
+        letter-spacing: 0.05rem;
+      }
+
+      .time {
+        font-size: 25px;
+        text-align: center;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body id="main">
+    <div id="root">
+      <h1>Remaining Days for completing DSA & Web Development</h1>
+
+      <div class="container" id="container">
+        <p id="days"></p>
+        <p class="day-para">Days</p>
+
+        <div id="timing">
+          <div class="time-in-hour">
+            <p class="time" id="hour"></p>
+            <p class="time-para">Hour</p>
+          </div>
+
+          <div class="time-in-min">
+            <p class="time" id="minutes"></p>
+            <p class="time-para">Minutes</p>
+          </div>
+
+          <div class="time-in-second">
+            <p class="time" id="second"></p>
+            <p class="time-para">Second</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

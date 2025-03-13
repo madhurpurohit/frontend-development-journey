@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif, serif;
+}
+
+body {
+  width: 100%;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 15px;
+}
+
+.card {
+  text-align: center;
+  background-color: #ffffef;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  scale: 1;
+  transition: ease 0.28s all;
+  -webkit-transition: ease 0.28s all;
+  -moz-transition: ease 0.28s all;
+  -ms-transition: ease 0.28s all;
+  -o-transition: ease 0.28s all;
+
+  &:hover {
+    scale: 1.03;
+  }
+}
+
+img {
+  width: 200px;
+  height: 180px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card-details {
+  padding: 10px;
+  letter-spacing: 0.1rem;
+}
+
+.cloth-type {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #2c2c2c;
+}
+
+.offer {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.btn {
+  font-size: 1.2rem;
+  color: #2c2c2c;
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+span {
+  display: inline-block;
+  height: 40vh;
+  background-color: #cf0809;
+}
+
+.first,
+.third {
+  width: 25vw;
+}
+
+.second,
+.fourth {
+  width: 60vw;
+}
+
+.third,
+.fourth {
+  margin-top: 12vw;
+}
+
+.second,
+.fourth {
+  margin-left: 13vw;
+}

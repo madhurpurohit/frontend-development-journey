@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "name": "vote_for_language_project",
+  "version": "1.0.0",
+  "description": "\"Internal Working Of React Using Vote For Language Project\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Madhur Purohit",
+  "license": "ISC"
+}

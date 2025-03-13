@@ -1,0 +1,132 @@
+/* General Body Styles */
+body {
+  font-family: "Poppins", "Arial", sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+/* Container Styles */
+.container {
+  text-align: center;
+  background: #ffffff31;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header Styling */
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Board Styles */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Individual Cells */
+.cell {
+  width: 120px;
+  height: 120px;
+  /* background-color: #fff; */
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 2px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.cell.taken {
+  pointer-events: none;
+  color: #555;
+}
+
+/* Winning message */
+#winner {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.winning-message {
+  font-size: 1.25rem;
+  margin-top: 20px;
+  color: #fff;
+}
+
+/* Restart Button */
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  /* background-color: #28a745; */
+  background: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 120, 255, 0.5);
+}
+
+button:hover {
+  /* background-color: #218838; */
+  background: #005fcc;
+  box-shadow: 0 6px 15px rgba(0, 120, 255, 0.7);
+}
+
+button:active {
+  scale: 0.95;
+  box-shadow: 0 2px 5px rgba(0, 120, 255, 0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .board {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  .cell {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

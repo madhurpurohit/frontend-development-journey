@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h3,
+p,
+li,
+a {
+  margin-bottom: 8px;
+}
+/* For changing background color we use background -color: ; property. */
+a {
+  background-color: #222;
+}
+
+/* If we want image in background than background-img: url(); property is used. */
+#hero-page {
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  background-image: url(./pexels-ferarcosn-190819.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#first {
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  background-image: url(./Coding\ Bacground.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* For adjust image size we use background-size: ; property. In this cover means it will cover the whole background size with contain it's original quality. & contains */
+
+/* If we don't want to repeat background image than we use background-repeat: no-repeat; property.*/
+
+/* If we change the position of background image than we use background-position: x-value y-value; property. We can also separate both axis position value with background-position-x: ; OR background-position-y: ; property. */
+
+/* If we want that while scrolling the webpage our image will not scroll, basically means to create parallax effect we use background-attachment: ; property. If the value is scroll than it will scroll but if the value is fixed than it will not scroll. */

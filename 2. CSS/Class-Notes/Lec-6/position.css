@@ -1,0 +1,117 @@
+/** With the help of position: ; property we can set the element in any location in our website. */
+/*? position:static; It is a default value of position property which every element gets by default, it simply means that your element stays in it's original position & do not overlap. */
+/*todo When we choose another option instead of static than we unlock 4 main property which is top: ;, bottom: ;, left: ;, right: ;. */
+/*? position:relative; It means your element position will be safe & anther element will not use this space even if you move away from your original space with the help of top,bottom,left,right property. */
+/*? position:absolute; It will apply respective of it's parent element is given any position. if it's parent element did not set to any position, than it will apply to respective of html element or viewport. It basically means that this element will be overlap all the elements which is come before this element, & this will hide behind next element which is came after it. When an element gets this property than it's original space will be free means another element use this space. */
+/*? position:fixed; It means your element position is fixed respective of your html element or viewport, means it will fix for the entire website, even if we scroll down the website i.e. navbar/Header of any website. */
+/*? position:sticky; It means your element position is fixed respective of your parent element which set to any position, if parent doesn't set to any position than it will work respective of body element. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  background-color: #222;
+  /* width: 100vw; */
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  z-index: 2;
+}
+
+ul > li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+a {
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 2000px;
+  border: 2px solid #000;
+  padding: 5px;
+  background-color: rgba(255, 225, 56, 0.753);
+
+  padding-top: 30px;
+  margin-top: 3px;
+
+  position: relative;
+}
+
+div {
+  display: inline-block;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+
+  position: relative;
+}
+
+.box1 {
+  background-color: rgb(127, 255, 212);
+}
+
+.box2 {
+  background-color: rgba(148, 255, 60, 0.904);
+  position: relative;
+  top: 80px;
+  /* left: 30px; */
+  /* bottom: 20px; */
+  /* right: 20px; */
+
+  /* position: absolute; */
+  /* top: 50px; */
+}
+
+.box3 {
+  background-color: rgba(248, 137, 97, 0.733);
+  position: sticky;
+  top: 40vh;
+  /* right: 55px; */
+}
+
+.box4 {
+  background-color: rgba(253, 162, 51, 0.911);
+  position: absolute;
+  top: 100px;
+  left: 10px;
+}
+
+.box5 {
+  background-color: rgba(255, 105, 180, 0.959);
+}
+
+.container-2 {
+  margin-top: 5px;
+  background-color: cyan;
+  padding: 100px 10px 10px;
+  height: 100vh;
+}
+
+.container-3 {
+  margin-top: 5px;
+  background-color: greenyellow;
+  padding: 10px;
+  height: 100vh;
+}
+
+/*! Some important points. */
+/* position: absolute, fixed; will always free it's own space that they occupy. */
+/* When we give position:fixed; than it will take width according to it's content size even if the element is block level. So to deal with this type of problem always give width:100%; to fixed position element Or we can use left: 0px; & right: 0px; than it will also take 100% width. */
+/* When we give position:fixed; than it will overlap all the element which came after it. & it will overlap above all the element so the element will not show because it is behind fixed element. */
+/* When we give position:sticky; than we always give either top or bottom value to it, otherwise it will not work. & sticky element won't get left or right value. */
+/* z-index: ; This property is used when we use position property which is not set to static otherwise it will not work. It is set auto by default so if you see any element which is hide behind another element than give z-index: ; property here we put only integer value without any parameter. & which element you want to show give higher value of that element which is above it. & if we want to hide any element behind it's overlapped element that just give negative value in z-index property. */
+/* z-index follow the stack data structure approach, means which value is higher it will show & another element will be hide behind it. */

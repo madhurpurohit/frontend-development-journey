@@ -1,0 +1,23 @@
+{
+  "name": "swiggy_ui_clone",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Madhur Purohit",
+  "license": "ISC",
+  "description": "Swiggy UI clone Using React, Router, Redux With live API",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.2.0",
+    "tailwindcss": "^4.0.8"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  }
+}

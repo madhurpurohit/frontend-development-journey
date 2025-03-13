@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Jost:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cricket Quiz - Hard Level</h1>
+      <form id="quizForm">
+        <!-- Question 1 -->
+        <div class="question">
+          <p>
+            1. Who scored the highest individual score in a single Test inning?
+          </p>
+          <label>
+            <input type="radio" name="q1" value="Brian Lara" /> Brian Lara </label
+          ><br />
+          <label>
+            <input type="radio" name="q1" value="Don Bradman" /> Don Bradman </label
+          ><br />
+          <label>
+            <input type="radio" name="q1" value="Matthew Hayden" /> Matthew
+            Hayden </label
+          ><br />
+          <label>
+            <input type="radio" name="q1" value="Len Hutton" /> Len Hutton </label
+          ><br />
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+          <p>2. Which cricketer has the most ducks in international cricket?</p>
+          <label>
+            <input type="radio" name="q2" value="Muttiah Muralitharan" />
+            Muttiah Muralitharan </label
+          ><br />
+          <label>
+            <input type="radio" name="q2" value="Courtney Walsh" /> Courtney
+            Walsh </label
+          ><br />
+          <label>
+            <input type="radio" name="q2" value="Chris Martin" /> Chris Martin </label
+          ><br />
+          <label>
+            <input type="radio" name="q2" value="Stuart Broad" /> Stuart Broad </label
+          ><br />
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+          <p>3. Who holds the record for the fastest century in ODI cricket?</p>
+          <label>
+            <input type="radio" name="q3" value="AB de Villiers" /> AB de
+            Villiers </label
+          ><br />
+          <label>
+            <input type="radio" name="q3" value="Corey Anderson" /> Corey
+            Anderson </label
+          ><br />
+          <label>
+            <input type="radio" name="q3" value="Shahid Afridi" /> Shahid Afridi </label
+          ><br />
+          <label>
+            <input type="radio" name="q3" value="Virat Kohli" /> Virat Kohli </label
+          ><br />
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+          <p>4. Which cricketer has the most sixes in international cricket?</p>
+          <label>
+            <input type="radio" name="q4" value="Chris Gayle" /> Chris Gayle </label
+          ><br />
+          <label>
+            <input type="radio" name="q4" value="Shahid Afridi" /> Shahid Afridi </label
+          ><br />
+          <label>
+            <input type="radio" name="q4" value="Rohit Sharma" /> Rohit Sharma </label
+          ><br />
+          <label>
+            <input type="radio" name="q4" value="MS Dhoni" /> MS Dhoni </label
+          ><br />
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+          <p>
+            5. Who is the youngest cricketer to score a century in international
+            cricket?
+          </p>
+          <label>
+            <input type="radio" name="q5" value="Shahid Afridi" /> Shahid Afridi </label
+          ><br />
+          <label>
+            <input type="radio" name="q5" value="Mohammad Ashraful" /> Mohammad
+            Ashraful </label
+          ><br />
+          <label>
+            <input type="radio" name="q5" value="Sachin Tendulkar" /> Sachin
+            Tendulkar </label
+          ><br />
+          <label>
+            <input type="radio" name="q5" value="Imran Nazir" /> Imran Nazir </label
+          ><br />
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+/** Flex item properties are that which is applied to child of flex container. */
+/*? order: ; With the help of this we can change the order of element by default it set to 0. If we give positive value than that element will go extreme right & if we give negative value than it will go to extreme left. */
+
+/*todo flex-grow, flex-shrink always work according to main axis. */
+
+/*? flex-grow: ; It means if we have extra space than how our element will take space it will set 0 by default. But if we gave any positive value of any element than it will take that much space in compare to another one. For example if we gave 2 than it will take twice in compare of another elements. */
+
+/*? flex-shrink: ; It means if we have less space than how our element will take space it will set 1 by default. But if we gave any positive value of any element than it will take that less space in compare to another one. For example if we gave 2 than it will shrink/compress twice in compare of another elements. */
+
+/*? flex-basis: ; flex-basis property sets the initial size of a flex item before any extra space is distributed or the item is allowed to grow or shrink. flex-basis: auto;(Uses the item’s size, or width/height if explicitly set.) */
+
+/*? align-self: ; It will work along cross axis. It will place the element. It will override the align-item property for the specific item. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: chartreuse;
+  padding: 5px;
+
+  /** FlexBox */
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px 5px 0;
+  border: 1px solid #2c2c2c;
+}
+
+.box-1 {
+  background-color: coral;
+  flex-basis: 200px;
+}
+
+.box-2 {
+  background-color: aquamarine;
+  flex-grow: 2;
+}
+
+.box-3 {
+  background-color: darkorange;
+  /*? flex-item properties. */
+  order: -1;
+}
+
+.box-4 {
+  background-color: gold;
+  flex-shrink: 3;
+  /* align-self: center; */
+}

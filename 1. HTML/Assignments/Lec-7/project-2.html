@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-2 On Form</title>
+  </head>
+  <body>
+    <h1>Employee Details Form</h1>
+
+    <form>
+      <label for="name">Full Name:</label>
+      <input
+        type="email"
+        id="name"
+        name="Full-name"
+        placeholder="Enter your full name"
+        required
+      />
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        name="Email"
+        id="email"
+        placeholder="xyz@example.com"
+        required
+      />
+      <br /><br />
+
+      <label for="conatct">Phone Number:</label>
+      <input
+        type="tel"
+        name="Contact"
+        id="conatct"
+        placeholder="Enter your phone number"
+        required
+      />
+      <br /><br />
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" id="Male" value="Male" />
+      <label for="Male">Male</label>
+      <input type="radio" name="gender" id="Female" value="Female" />
+      <label for="Female">Female</label>
+      <input type="radio" name="gender" id="Other" value="Other" />
+      <label for="Other">Other</label>
+      <br /><br />
+
+      <label for="title">Job Title:</label>
+      <input
+        type="text"
+        name="Job-title"
+        id="title"
+        placeholder="Enter your job title"
+        required
+      />
+      <br /><br />
+
+      <label for="department">Department:</label>
+      <select name="Department" id="department">
+        <!-- For default selected option use disabled & selected attributes -->
+        <option value="" disabled selected>Choose any option</option>
+        <option value="Engineer">Engineer</option>
+        <option value="Medical">Medical</option>
+        <option value="IT">IT</option>
+        <option value="Law">Law</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

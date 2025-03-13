@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.first {
+  /* height: 500px; */
+  /* width: 500px; */
+  /* height: 60vh; */
+  /* width: 60vh; */
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: red;
+
+  /** For horizontally set middle we can use margin: auto; */
+  /* margin-left: 30vw; */
+  margin: auto;
+  /* margin-top: 20vh; */
+
+  /** What will happen when we use vw instead of vh? */
+  height: 30vw;
+  width: 30vw;
+
+  margin-top: 8vw;
+}

@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.horizontal {
+  position: absolute;
+  width: 100vw;
+  height: 8vw;
+  background-color: darkblue;
+  top: 40%;
+}
+
+.vertical {
+  width: 8vw;
+  height: 100vh;
+  background-color: darkblue;
+  margin-left: 20vw;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media attachments</title>
+  </head>
+  <body>
+    <!-- Audio files attachment. -->
+    <!-- <audio src="./Perfect-Ed-Sheeran.mp3" controls></audio> -->
+
+    <audio controls>
+      <source src="./video/Perfect-Ed-Sheeran.mp3" type="audio/mp3" />
+      <source
+        src="../Lec-9/video/Gulabi Sadi - Sanju Rathod.mp3"
+        type="audio/mp3"
+      />
+      <!--* If audio is not loaded than show the below text. -->
+      Audio is not loaded.
+    </audio>
+
+    <!-- Video files attachment. -->
+    <!-- <video src="./Salaar Part-1.mkv" controls></video> -->
+
+    <video controls width="500" height="500" autoplay muted>
+      <source src="../Lec-9/video/Khaab by Akhil.mp4" type="video/mp4" />
+      Video is not loaded.
+    </video>
+
+    <!-- Youtube video attachment. -->
+    <!-- Here in src we need a yt url like "https://www.youtube.com/watch?v=fGkXjQkXzW8" in this url replace "watch?v=" with with "embed/", basically the url looks like "https://www.youtube.com/embed/id", here the id is "fGkXjQkXzW8"-->
+    <iframe
+      src="https://www.youtube.com/embed/_AuKZ3WdcU4"
+      frameborder="0"
+    ></iframe>
+    <iframe
+      src="https://www.youtube.com/embed/fGkXjQkXzW8"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

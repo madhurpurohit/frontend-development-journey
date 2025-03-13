@@ -1,0 +1,20 @@
+/** overflow: ; This property means hide or visible the data present inside your element/parent element, but is goes outside of your element/parent element. */
+/*? overflow:visible; It simply means show all the data/content even if it goes outside the element. It is a default behavior of all the elements. */
+/*? overflow:hidden; It simply means that hide the data/content which goes outside of our element. & the content is not accessible into our website. */
+/*? overflow:scroll; It means your data/content is hide which goes outside the element but we can see on scrolling of that element. This will give x & y direction scroll. */
+/*? overflow:auto; It means it will give scrollbar according to our content overflow direction. */
+/*? overflow-x: ; It means give scrollbar in x direction. */
+/*? overflow-y: ; It means give scrollbar in y direction. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 217, 0, 0.952);
+
+  overflow: auto;
+}

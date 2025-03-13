@@ -1,0 +1,97 @@
+/** Grid Properties:- Grid follows 2-D layout so we can move elements in 2D. For that we made a container & set it's display to grid. Than it's child automatically act as grid-child. */
+/*! Properties That will apply only on container. */
+/*? display:grid; Set the container as grid. */
+/*? grid-template-rows: ; This will tell how many rows we want & how much height we want for every singe row. */
+/*? grid-template-column: ; This will tell how many columns we want & how much height we want for every singe column. */
+/*todo In both properties of above we can set value in px, em, rem etc. */
+/*? grid-template-rows: 200px 200px; It means make 2 rows with height of 200px each. Same for column but this time it is in width. */
+/* ? grid-template-rows: 1fr 1fr 1fr; This means make 3 rows with height of 1-fraction means divide total height equally in each of it's element so that it can occupy it's full height. Same with column. */
+/* ? grid-template-rows: repeat(3, 1fr); This means make 3 rows with height of 1-fraction means divide total height equally in each of it's element so that it can occupy it's full height. Same with column. In this repeat means again & again make rows until it reaches to the first value that is 3. */
+
+/*? grid-auto-rows: ; This will automatically apply height on all rows & it will automatically create rows with this width value, But this will not apply on that element which is set to grid-template-rows. */
+
+/*? gap: ; This means space between rows & columns because it is combination of row-gap: ; & column-gap: ;. */
+
+/** Grid properties that will apply on child element. */
+/*? grid-row-start: ; This means from where the element will start according to row. */
+/*? grid-row-end: ; This means till the element will end according to row. */
+/*? grid-row: start/end; This will shorthand of above both. */
+/*? grid-column-start: ; This means from where the element will start according to column. */
+/*? grid-column-end: ; This means till the element will end according to column. */
+/*? grid-column: start/end; This will shorthand of above both. */
+
+/*todo grid-area: row-start/column-start/row-end/column-end; This will shorthand notation of the four value that we mention above. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(226, 226, 226);
+
+  /*? grid properties. */
+  display: grid;
+  /* grid-template-columns: 200px 200px 200px; */
+  /* grid-template-rows: 200px 200px; */
+
+  /* If we have 1000px total width of container than first box gets 1000*1/4 & second box gets 1000*3/4 & third box gets 1000*1/4. */
+  /* grid-template-columns: 1fr 3fr 1fr; */
+
+  grid-template-columns: repeat(3, 1fr);
+
+  /* If we don't give grid-template-rows than it will automatically create rows accroding our content or elements. */
+  /* grid-template-rows: 1fr 1fr; */
+
+  /* gap: 10px; */
+  row-gap: 12px;
+  column-gap: 12px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.box-1 {
+  background-color: rgb(248, 68, 100);
+
+  /*? Grid child properties. */
+  /* grid-column-start: 1; */
+  /* grid-column-end: 4; */
+  grid-column: 1/4;
+}
+
+.box-2 {
+  background-color: rgb(248, 68, 179);
+
+  /* grid-row-start: 2; */
+  /* grid-row-end: 4; */
+  grid-row: 2/4;
+}
+
+.box-3 {
+  background-color: rgb(84, 255, 92);
+
+  grid-column: 2/4;
+}
+
+.box-4 {
+  background-color: rgb(84, 215, 255);
+}
+
+.box-5 {
+  background-color: rgb(255, 181, 84);
+}
+
+.box-6 {
+  background-color: rgb(115, 84, 255);
+
+  grid-column: 1/4;
+}

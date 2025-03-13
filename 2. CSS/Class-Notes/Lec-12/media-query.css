@@ -1,0 +1,65 @@
+/** With the help of Media Query we can create an responsive design. */
+/*? @media(){ }, This is the syntax for writing media query. */
+/*? media(min-width:200px){} This means when our screen size is above 200px than this will apply. */
+/*? media(max-width:200px){} This means when our screen size is below 200px than this will apply. */
+/*todo In media we can use advanced width property.  */
+/*? media(width<=200px){} This will same as max-width. */
+/*? media(width>=200px){} This will same as min-width. */
+/*? media(200px<=width<=700px){} This means when our screen size is above 200px & below 700 px than this css will apply. */
+/*todo In media we can use orientation property like landscape or portrait. */
+/*? media(width>=500px)&&(orientation=landscape){} if width is greater than 500px & orientation is landscape than this css will apply. */
+/*? media(width>=500px)&&(orientation=portrait){} if width is greater than 500px & orientation is portrait than this css will apply. */
+
+/*todo aspect-ratio: ; This is the ratio of the width to the height of the viewport. (i.e. 16:9) */
+
+/** Mobile First vs Desktop First Approach. */
+/*? In desktop first approach we write the general css consider that it will apply on desktop, than we handle it for another devices. */
+/*? In mobile first approach we write the general css consider that it will apply on mobile, than we handle it for another devices. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2.5rem;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(220, 220, 220);
+}
+
+@media (max-width: 230px) {
+  .container {
+    background-color: rgb(150, 150, 150);
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (width>=700px) {
+  .container {
+    background-color: rgb(100, 100, 100);
+  }
+}
+
+@media (min-width: 600px) AND( orientation:landscape) {
+  .container {
+    background-color: rgb(50, 50, 50);
+  }
+}
+
+/** Desktop width: */
+/** Mobile width: */
+/** IPad width: */

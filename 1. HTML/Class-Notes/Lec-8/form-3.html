@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details From</title>
+  </head>
+  <body>
+    <h1>Employee Details Form</h1>
+
+    <!--* In action attribute we gave the url of our server where we want to store all the details. -->
+    <form action="url">
+      <label for="name">Full Name:</label>
+      <input type="text" name="username" id="name" required />
+      <br /><br />
+
+      <label for="email">Email:</label>
+      <input type="text" name="user-email" id="email" required />
+      <br /><br />
+
+      <label for="number">Phone Number:</label>
+      <input type="tel" name="User-number" id="number" required />
+      <br /><br />
+
+      <label>Gender:</label>
+      <input type="radio" name="gender" id="male" value="Male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="Female" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="other" value="Other" />
+      <label for="other">Other</label>
+      <br /><br />
+
+      <label for="title">Job Title:</label>
+      <input type="text" name="Job-title" id="title" required />
+      <br /><br />
+
+      <label for="department">Select Your Department:</label>
+      <select name="Department" id="department" required>
+        <!--* For default selected option we use disabled and selected attribute, where value attribute is empty. -->
+        <option value="" disabled selected>Choose any option</option>
+        <option value="">Engineer</option>
+        <option value="Finance">Finance</option>
+        <option value="Medical">Medical</option>
+        <option value="IT">IT</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

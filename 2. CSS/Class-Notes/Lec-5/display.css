@@ -1,0 +1,27 @@
+/** We can give height, width, padding to block level element easily, But for inline element we can only give margin horizontally, & we can not give width, height, vertical margin. So to solve this problem we use display: ; property so we can give width & height to inline element. */
+/*? display:inline; It will convert an element into inline element. */
+/*? display:block; It will convert an element into block element. */
+/*? display:inline-block; It will not convert & element instead it will only change the behavior of inline element so that they can get all the property that can give to block element but they behave like inline element. */
+.first {
+  background-color: coral;
+  height: 100px;
+  width: 100px;
+}
+.second {
+  background-color: chartreuse;
+  width: 100px;
+  height: 100px;
+}
+.third {
+  display: inline-block;
+  background-color: darkorange;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+.fourth {
+  background-color: gold;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(180, 180, 180);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 40vw;
+  height: 40vw;
+  background-color: rgb(225, 225, 225);
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.white-box {
+  background-color: #fff;
+}
+
+.black-box {
+  background-color: #000;
+}

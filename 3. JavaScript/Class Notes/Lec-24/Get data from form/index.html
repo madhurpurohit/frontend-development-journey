@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Data From Forms in JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Jost:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Student Registration <strong>Form</strong></h1>
+
+      <form>
+        <label for="first">User Name:</label>
+        <input
+          type="text"
+          name="Name"
+          id="first"
+          placeholder="Enter your first name"
+          autocomplete="off"
+        />
+
+        <label for="second">Last Name:</label>
+        <input
+          type="text"
+          name="LastName"
+          id="second"
+          placeholder="Enter your last name"
+          autocomplete="off"
+        />
+
+        <label for="third">Age:</label>
+        <input
+          type="number"
+          name="Age"
+          id="third"
+          placeholder="Enter your age"
+          autocomplete="off"
+        />
+
+        <button type="submit">Submit</button>
+        <button type="reset" id="reset-btn">Reset</button>
+      </form>
+      <div id="result">Show</div>
+    </div>
+
+    <script src="./get-data.js"></script>
+  </body>
+</html>

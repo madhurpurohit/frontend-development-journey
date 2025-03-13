@@ -1,0 +1,85 @@
+/** Border property */
+/*? border-width: ; In this we will tell the width of border around our content/Selector. */
+/*? border-style: ; In this we will tell which type of border we want like solid, dotted, double etc. */
+/*? border-color: ; In this we will tell which color of border we want. */
+/*todo we can use a shorthand notation for all the three values in one place which is. border: width type color; In this we will write all the three value. */
+
+/** border-radius: ; In this we will write value with parameters like px, em etc. So our border will be make a smooth curve on it's all four edges. If we want any one edge than we can choose like border-top-radius, border-bottom-radius, border-top-left-radius, border-top-right-radius etc. */
+/*? if we want to make circle type border than we write border-radius: 50%; */
+
+h1 {
+  width: 50vw;
+  background-color: aqua;
+  /* border-width: 2px; */
+  /* border-style: solid; */
+  /* border-color: #222; */
+  border: 2px solid #222;
+
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  /* padding-top: 10px; */
+  /* padding-right: 10px; */
+  /* padding-bottom: 10px; */
+  /* padding-left: 10px; */
+  padding: 10px;
+
+  margin: 30px 0 30px 30vw;
+
+  text-align: center;
+}
+
+ul {
+  background-color: coral;
+  border: 2px dotted chartreuse;
+
+  /* margin-top: 10px; */
+  /* margin-right: 10px; */
+  /* margin-bottom: 10px; */
+  /* margin-left: 10px; */
+  margin: 10px;
+}
+
+p {
+  background-color: chartreuse;
+}
+
+/** Padding property. Padding means distance or space between border & content of any element. */
+/*? padding-top: ; Here we can give space between border & content from top. */
+/*? padding-right: ; Here we can give space between border & content from right. */
+/*? padding-bottom: ; Here we can give space between border & content from bottom. */
+/*? padding-left: ; Here we can give space between border & content from left. */
+/*todo We can use shorthand like padding: top left-right bottom; padding: top-bottom left-right; padding: top right bottom left;. we can give the value with parameters like px, em, % etc. */
+
+/** Margin property.Margin means distance or space outside of border or between two element. */
+/*? margin-top: ; Here we can give space between two elements or outside border from top. */
+/*? margin-right: ; Here we can give space between two elements or outside border from right. */
+/*? margin-bottom: ; Here we can give space between two elements or outside border from bottom. */
+/*? margin-left: ; Here we can give space between two elements or outside border from left. */
+/*todo We can use shorthand like margin: top left-right bottom; margin: top-bottom left-right; margin: top right bottom left;. we can give the value with parameters like px, em, % etc. */
+
+/** Here we have box-sizing: ; property this means when we gave width, height, border, padding, margin than how our total width & height will be calculated for any element. */
+/*? By default it will set box-sizing: content-box; It means that total width is equal to width of content, width of border, width of padding. Total width=content+border+padding. */
+/*? If we choose box-sizing: border-box; Than it means total width is equal to width of content only. In this when we give border or padding than it will automatically adjust the width of content. like Total width=content width. content-width=content-width-padding-border. */
+/*todo In every responsive project we use some property in universal selector. */
+/* *{ */
+/* margin:0; */
+/* padding:0; */
+/* box-sizing:border-box; */
+/* } */
+
+/*! For box sizing visualization link:- https://excalidraw.com/#json=4V02xL57Svbv_Vv0Gz5qt,AMShGaLgaqj0V-Gelq6mvg */
+
+/** text-align: ; This property means how our text will be placed in its content width. If we select center than our text or content will be moved to center. */
+
+/** pseudo-class :hover is used after any selector. This means when we move cursor over the content or box than what we want to change or display like change color, scale, text-color, width, height etc. */
+
+h1:hover {
+  scale: 1.5;
+  color: #fff;
+  background-color: #2c2c2c;
+  border: 5px coral solid;
+}

@@ -1,0 +1,56 @@
+/** Fonts Properties:- */
+/** 1. font-family: ; In this you select which type of font you want to your website. */
+/** 2. font-size: ; In this you can adjust the size of font in any parameter like px, cm, em, rem, % etc. */
+/** 3. font-variant: ; In this we can choose normal or small caps, small caps means your small alphabet height remains same but they convert into capital alphabets. */
+/** 4. font-weight: ; Here we can select multiple values or between 100-900, in this you tell that in your webpages how fonts look like means it is bold, semi bold, normal, 100, 400 etc. */
+/** 5. font-style: ; In this you tell which style of font you would like to show in your website like italic, oblique, normal. */
+
+/** em depends on its parent font size which is basically depends on browser to browser but for chrome it is 16px default font size. So if parent has 16px font size than 1em = 16px.  */
+/** em depends on its root means html tag font size which is basically depends on browser to browser but for chrome it is 16px default font size. So if parent has 16px font size than 1rem = 16px.  */
+
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-size: 16px; */
+  /* font-size: 1em; */
+  font-size: 1rem;
+  /* font-weight: 900; */
+  font-weight: bolder;
+  font-style: oblique;
+  font-variant: small-caps;
+}
+
+/** vh (viewport height) or vw (viewport width) */
+/** vw means it will take the size of your browser window width. For example if we write font-size:10vw; than it means that it will take 10% size of your browser window width if your width will change than the size will also be changed. vh is also same but at this time it will consider your browser height. */
+
+h3 {
+  font-size: 10vw;
+}
+
+/** There are some other property like:- */
+/** line-height: ; It is used to give distance between two parallel lines. If we wrote 1.5 it basically means 1.5*10=150px, so here also we can use parameters like px, em, rem, % etc. */
+/** letter-spacing: ; It is used to give space or distance between two letter or alphabet. The value is given with px, em, rem, % etc. */
+/** word-spacing: ; It is used to give space or distance between two words. The value is given with px, em, rem, % etc. */
+/** text-transform: ; It is used to transform your text on website like if we select capitalize it means transform first letter of every single word into capital alphabet. & if we select lowercase than it will convert the whole text into small alphabet & if we select uppercase than it will convert the whole text into capital alphabet. */
+
+.css-article {
+  letter-spacing: 0.5px;
+  word-spacing: 0.8px;
+  text-transform: capitalize;
+  line-height: 25px;
+}
+
+/*todo Cascading Rules */
+/* Order<Specificity<Type/Inline<!important  */
+/*? Order means when we write same property inside single selector Or we rewrite any selector than the lower Selector or property gets priority, because the CSS will apply from Top to Down. */
+
+/*? In Specificity there are multiple selectors.  */
+/** Here the lower one, which gets less priority is Universal Selector. */
+/** Here the next one, which gets higher priority than Universal Selector is Tag/Attribute/Pseudo-Element Selector. */
+/** Here the next one, which gets higher priority than Tag Selector is Class/Pseudo-Class Selector. */
+/** Here the next one, which gets higher priority than Class/Pseudo-Class Selector is Id Selector. */
+
+/*todo Id>Attribute>Class/Pseudo-Class>Tag>universal. */
+/** All the combinators like Descendent, Child, General Sibling, Adjacent Sibling & Universal gets sae priority but which comes lower is gets higher priority than others. */
+
+/*? Type means External, Internal or Inline CSS, in all of these type Inline CSS gets higher priority than Order or Specificity Or Internal & External. But in External & Internal CSS case the lower gets higher priority than other. */
+/*? When we wrote !important keyword in any property of any selector in CSS than it will gets higher priority than all the other cascading rules. & this property will not change because no one can beat this keyword. */

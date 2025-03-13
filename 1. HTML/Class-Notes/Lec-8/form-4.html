@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIT- JEE Exam Form</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>IIT JEE Registration From</legend>
+
+        <label for="name">Full Name:</label>
+        <input type="text" name="username" id="name" required />
+        <br /><br />
+
+        <label for="email">Email:</label>
+        <input type="text" name="user-email" id="email" required />
+        <br /><br />
+
+        <label for="contact">Phone Number:</label>
+        <input type="tel" name="User-number" id="contact" required />
+        <br /><br />
+
+        <label for="password">Password:</label>
+        <input type="password" name="Password" id="password" />
+        <br /><br />
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" id="male" value="Male" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="Female" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="Other" />
+        <label for="other">Other</label>
+        <br /><br />
+
+        <!--* min/max="yyyy-mm-dd" -->
+        <label for="dob">Date Of Birth:</label>
+        <input
+          type="date"
+          name="DOB"
+          id="dob"
+          min="2001-01-01"
+          max="2005-12-31"
+          required
+        />
+        <br /><br />
+
+        <label for="school-name">School-Name:</label>
+        <input type="text" name="school-name" id="school-name" required />
+        <br /><br />
+
+        <label for="board">Boards:</label>
+        <select name="Boards" id="board" required>
+          <option value="" disabled selected>Choose any option</option>
+          <option value="State Board">State Board</option>
+          <option value="CBSE">CBSE</option>
+          <option value="ICSE">ICSE</option>
+        </select>
+        <br /><br />
+
+        <label for="passing-year">Year Of Passing:</label>
+        <input
+          type="number"
+          id="passing-year"
+          name="passing-year"
+          min="2023"
+          max="2025"
+          required
+        />
+        <br /><br />
+
+        <label for="ex-center">Exam Center:</label>
+        <select name="Center" id="ex-center">
+          <option value="" disabled selected>Select any option</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Indore">Indore</option>
+          <option value="Ujjain">Ujjain</option>
+          <option value="Dewas">Dewas</option>
+        </select>
+        <br /><br />
+
+        <button>Register</button>
+      </fieldset>
+    </form>
+
+    <!--todo This is data is show in backend or database like this:- -->
+    <!--* username=Devflux&user-email=devflux%40gmail.com&User-number=%2B915488620135&Password=Madhur7610%40&gender=Male&DOB=2001-06-05&school-name=Saraswati+Shishu&Boards=State+Board&passing-year=2023&Center=Indore -->
+  </body>
+</html>

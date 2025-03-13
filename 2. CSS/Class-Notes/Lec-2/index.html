@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Child Element</title>
+    <style>
+      body {
+        background-color: #2c2c2c;
+        color: #fff;
+      }
+
+      /* We cannot apply CSS using any selector if parent is either p or heading tag & child is also a block level element. We can apply directly with he tag, class, id name but we cannot use any descendent, child, adjacent sibling, general sibling selector. & we cannot apply CSS through parent tag, id , class. */
+      p > div {
+        color: #ababaa;
+        background-color: chartreuse;
+      }
+
+      div > p {
+        color: #fffb00;
+      }
+
+      /* Also ul, ol list is block level element so we only write li inside it. But inside li we can write anything or any tag that we want although li is also block level element but it allows. */
+    </style>
+  </head>
+  <body>
+    <!-- <p class="first" id="first">
+        <div class="first">Hello</div>
+    </p> -->
+
+    <div>
+      <p>Hello all</p>
+    </div>
+  </body>
+</html>

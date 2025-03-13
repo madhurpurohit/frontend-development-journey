@@ -1,0 +1,322 @@
+/** Default CSS For all */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --card-hover-background-color: rgb(255, 255, 255);
+  --main-background-color: rgb(250, 250, 250);
+}
+
+/** Same element CSS */
+
+body {
+  background-color: var(--main-background-color);
+}
+
+input {
+  border: none;
+  outline: none;
+  display: inline-block;
+  background-color: var(--main-background-color);
+}
+
+/** Navigation Menu */
+header {
+  padding: 10px 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  & .logo img {
+    width: 12rem;
+  }
+
+  & .city-search {
+    padding: 10px;
+    margin-left: 25px;
+    height: 55px;
+    width: 52vw;
+    border: 1px solid #e7e7e7;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 0px rgba(140, 149, 159, 0.2);
+    display: flex;
+    align-items: center;
+
+    & .location-icon {
+      width: 22px;
+    }
+
+    & #person-location {
+      font-size: 1.4rem;
+      margin: 0 7px;
+      width: 200px;
+      padding: 5px;
+    }
+
+    & .vertical-line {
+      display: inline-block;
+      position: relative;
+    }
+
+    & .vertical-line::before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      left: 0;
+      width: 0.01rem;
+      height: 2rem;
+      border: 0.05rem solid rgb(207, 207, 207);
+    }
+
+    & .search-icon {
+      width: 23px;
+      margin-left: 10px;
+    }
+
+    & #searching {
+      margin: 0 5px;
+      font-size: 1.4rem;
+      width: 100%;
+      padding: 5px;
+    }
+  }
+
+  & .login {
+    font-size: 1.8rem;
+    margin-left: 80px;
+    color: rgb(161, 161, 161);
+  }
+
+  & .signup {
+    font-size: 1.8rem;
+    margin-left: 25px;
+    color: rgb(161, 161, 161);
+  }
+
+  & .login:hover,
+  .signup:hover {
+    color: rgb(110, 110, 110);
+  }
+}
+
+.hero-page .hero-section {
+  & .address-info {
+    margin: 25px 0px;
+    padding: 0 120px;
+    letter-spacing: 0.1rem;
+    color: rgb(140, 140, 140);
+
+    & .line {
+      margin: 0 5px;
+      color: rgb(190, 190, 190);
+    }
+
+    & .city {
+      color: rgb(215, 215, 215);
+    }
+  }
+
+  & .choice {
+    margin: 0 27px;
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+
+    & .box {
+      display: flex;
+      align-items: center;
+      margin-right: 38px;
+      cursor: pointer;
+
+      & .image {
+        margin-right: 10px;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(240, 240, 240);
+        position: relative;
+
+        border-radius: 50%;
+        background-image: url(https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png?output-format=webp);
+        background-position: center;
+        background-size: 35px 35px;
+        background-repeat: no-repeat;
+
+        transition: all linear 0.2s;
+      }
+
+      & .image-2 {
+        background-image: url(https://b.zmtcdn.com/data/o2_assets/246bbd71fbba420d5996452be3024d351616150055.png);
+      }
+
+      & .image-3 {
+        background-image: url(https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png?output-format=webp);
+      }
+
+      & span {
+        font-size: 1.9rem;
+        letter-spacing: 0.05rem;
+        color: rgb(70, 70, 70);
+        transition: all linear 0.2s;
+      }
+
+      &:hover {
+        & span {
+          color: rgb(239, 79, 95);
+        }
+
+        & .image {
+          background-color: rgb(226, 237, 255);
+        }
+      }
+    }
+  }
+
+  & .collections {
+    margin-top: 25px;
+    padding: 0 120px;
+
+    & .heading {
+      margin: 5px 0;
+      padding: 15px 5px;
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+    }
+
+    & .para {
+      padding: 0 5px;
+      font-size: 1.8rem;
+      color: rgb(120, 120, 120);
+    }
+
+    & .cards-collection {
+      display: flex;
+      align-items: center;
+
+      & .cards {
+        width: 350px;
+        height: 305px;
+        margin: 10px 30px 30px 0;
+        padding: 10px;
+        border-radius: 20px;
+        transition: all linear 0.25s;
+
+        & .image {
+          position: relative;
+
+          & img {
+            width: 330px;
+            height: 200px;
+            border-radius: 10px;
+          }
+          & .offer {
+            padding: 0 30px 0 0;
+            position: absolute;
+            left: 0;
+            bottom: 15px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(
+              90deg,
+              rgb(17, 85, 203) 0%,
+              rgb(83, 140, 238) 25%,
+              rgb(17, 85, 203) 50%,
+              rgba(17, 85, 203, 0.8) 80%,
+              rgba(17, 85, 203, 0) 100%
+            );
+            border-radius: 3px;
+
+            & .flat {
+              font-weight: 400;
+            }
+
+            & img {
+              width: 18px;
+              height: 18px;
+              margin: 0 8px;
+              position: relative;
+              top: 3px;
+              left: 2px;
+            }
+          }
+        }
+
+        & .restaurant-info {
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          & .restaurant-name {
+            font-size: 1.6rem;
+            letter-spacing: 0.01rem;
+            font-weight: 500;
+          }
+
+          & .rating {
+            padding: 1px 2.5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background-color: rgb(38, 126, 62);
+            border: 1px solid rgb(38, 126, 62);
+            border-radius: 5px;
+            color: #fff;
+            position: absolute;
+            right: 1px;
+          }
+        }
+
+        & .food-info {
+          margin: 5px 0;
+          position: relative;
+
+          & .food-name {
+            font-size: 1.5rem;
+            letter-spacing: 0.01rem;
+            color: rgb(120, 120, 120);
+          }
+
+          & .price {
+            font-size: 1.3rem;
+            letter-spacing: 0.01rem;
+            color: rgb(120, 120, 120);
+            position: absolute;
+            right: 0;
+            top: 1.5px;
+          }
+        }
+
+        & .restaurant-address {
+          position: relative;
+
+          & .location {
+            font-size: 1.35rem;
+            color: rgb(180, 180, 180);
+          }
+
+          & .distance {
+            font-size: 1.13rem;
+            font-weight: 400;
+            letter-spacing: 0.05rem;
+            position: absolute;
+            right: 0;
+          }
+        }
+
+        &:hover {
+          background-color: rgb(250, 250, 250);
+          box-shadow: 0px 5px 24px 2px rgba(140, 149, 159, 0.2);
+        }
+      }
+    }
+  }
+}

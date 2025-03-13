@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Slider Example</title>
+    <!-- <style>
+      /* Style the container to center everything */
+      .slider-container {
+        width: 80%;
+        margin: 50px auto;
+        text-align: center;
+      }
+
+      /* Style the label for the slider */
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      /* Style the slider */
+      .slider {
+        -webkit-appearance: none; /* Removes default styling for WebKit browsers */
+        width: 100%;
+        height: 8px; /* This sets the height of the track */
+        background: transparent; /* Make background transparent as track is styled separately */
+        outline: none; /* Remove outline for focus */
+      }
+
+      /* Style the track of the slider */
+      .slider::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 8px;
+        background-color: #ddd; /* Light gray color for the track */
+        border-radius: 4px; /* Rounded corners */
+      }
+
+      /* Style the thumb (draggable part) of the slider */
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Removes default thumb styling */
+        width: 20px; /* Width of the thumb */
+        height: 20px; /* Height of the thumb */
+        background-color: #4caf50; /* Green color */
+        border-radius: 50%; /* Makes the thumb circular */
+        cursor: pointer; /* Changes cursor to pointer when hovering */
+        margin-top: -6px; /* Adjusts the thumb position to center it on the track */
+      }
+
+      /* Add hover effect for the thumb */
+      .slider:hover::-webkit-slider-thumb {
+        background-color: #45a049; /* Darken the green on hover */
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="slider-container">
+      <label for="volumeSlider">Adjust Volume</label>
+      <input
+        type="range"
+        id="volumeSlider"
+        class="slider"
+        min="0"
+        max="100"
+        value="50"
+      />
+    </div>
+  </body>
+</html>

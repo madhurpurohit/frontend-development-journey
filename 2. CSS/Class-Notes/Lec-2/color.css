@@ -1,0 +1,29 @@
+/* Color with HEX value, it will start from # & have six character which is (0-9 & a-f). In this first two value is for Red, next two value is for Green & next two values is for Blue & if it have two extra character than it is for alpha value.i.e. #5c3f6d, #6d7a81f8 */
+a {
+  color: #fff;
+}
+
+/* Color with Name Value, i.e. pink, red, yellow, blue etc. */
+h1 {
+  color: chartreuse;
+}
+
+/* Color with RGB value, here all the three value is between 0 to 255. i.e. rgb(0,0,0) is black, rgb(255,255,255) is white. */
+p {
+  color: rgb(0, 226, 215);
+}
+
+/* Color with RGBA here rgb means the same but A means alpha, it basically means opacity of color. & it's value is in between 0 to 1. Here 0 means fully transparent & means fully visible. */
+h3 {
+  color: rgba(255, 255, 0, 0.6);
+}
+
+/* Color with HSL value, here H means Hue & it is between 0-360, S means Saturation & it is between 0-100% & L means Light & it is between 0-100%, i.e. 0% is Black & 100% is White. */
+ul > li {
+  color: hsl(145, 100%, 50%);
+}
+
+/* Color with HSLA value , here all the three values are same & A means alpha, it basically means opacity & it is between 0-1. */
+ol > li {
+  color: hsla(192, 100%, 50%, 0.5);
+}

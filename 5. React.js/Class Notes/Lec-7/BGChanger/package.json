@@ -1,0 +1,17 @@
+{
+  "name": "useeffect_hook",
+  "version": "1.0.0",
+  "description": "\"useEffect Hook In React\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Madhur Purohit",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}

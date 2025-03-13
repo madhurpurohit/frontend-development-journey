@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Path in HTML</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+        color: #fff;
+      }
+      img {
+        border-radius: 12px;
+      }
+      #img-1 {
+        padding: 5px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        margin-right: 5px;
+      }
+      #img-2 {
+        padding: 5px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--* Relative Path -->
+    <div id="img-1">
+      <img
+        src="../../../HTML/Class-Notes/Lec-3/Coding Bacground.png"
+        alt="Relative Path"
+      />
+      <p>Here the src="../../../HTML/Class-Notes/Lec-3/Coding Bacground.png"</p>
+    </div>
+
+    <!--* Absolute Path -->
+    <!--* Visualization:- https://excalidraw.com/#json=hdgDwy6Jo9JflbeVrZ1HB,xrrEv7bEfwPdNbk0lOaigQ -->
+    <div id="img-2">
+      <img
+        src="/home/dev_madhur/Desktop/Frontend Web Development/HTML/Class-Notes/Lec-3/Coding Bacground.png"
+        alt="Absolute Path"
+      />
+      <p>
+        Here the src="/home/dev_madhur/Desktop/Frontend Web
+        Development/HTML/Class-Notes/Lec-3/Coding Bacground.png"
+      </p>
+    </div>
+
+    <!--todo This will not work because it can steal our data. Absolute paths pointing to your file system won't work in browsers unless you're running a local server. -->
+
+    <!--! Question:- If we directly open the html file or copy path of html file & paste it on browser than it will works fine, but if we use live preview or live server (go live) extension than it will not work why?  -->
+    <!--todo Answer:- If you copy the path of your HTML file and paste it on your browser, or directly open html file in this condition they both will work perfectly. But if you turn on live preview or live server (go live) extension, & you will redirect browser page than it will not show the image. Here you can see that browser show the url that is C:/Users/filepath, that will tell the browser to fetch the file directory from your local machine, so the browser can access other files like images, video, css, js etc. Here the absolute path will work correctly because the browser is using the full path of your local file system. But if you use live server extension and click on go live than you browser url looks like 127.0.0.1:5500/filepath, or 127.0.0.1:3000/filepath, in this case the browser no longer uses your local file system directly. For solution you can firstly deploy your image on the web browser and than use absolute url i.e. https://unsplash.com, now this will work fine. -->
+  </body>
+</html>

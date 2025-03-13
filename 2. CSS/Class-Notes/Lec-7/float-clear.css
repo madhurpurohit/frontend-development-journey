@@ -1,0 +1,44 @@
+/** float: ; This means when we read any newspaper than we see some text is came aside an image, so in webpage to achieve this type of layout we use float. This property is give to img/any element so the content comes after it will be adjust. */
+/*? float:left; It means the image will be shown the left side of the webpage & content is shown right side of the image. */
+/*? float:right; It means the image will be shown the right side of the webpage & content is shown left side of the image. */
+
+/** clear: ; This will used when we any element is set float to either float or right. In this case to go to next line if any element is set right or left & the element is come after this element in html. */
+/*? clear:left; This means if any element is set to left before this element than this element will appear in next line. */
+/*? clear:right; This means if any element is set to right before this element than this element will appear in next line. */
+/*? clear:both; This means if any element is set to left or right before this element than this element will appear in next line. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-1 {
+  background-color: cyan;
+  padding: 10px;
+  width: 100%;
+  height: 450px;
+}
+
+.container-2 {
+  background-color: greenyellow;
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  height: 450px;
+}
+
+#img-1 {
+  width: 250px;
+  /* height: 250px; */
+  aspect-ratio: 1;
+
+  float: left;
+  margin-right: 15px;
+}
+
+#img-2 {
+  width: 250px;
+  height: 300px;
+
+  float: right;
+  margin-left: 15px;
+}

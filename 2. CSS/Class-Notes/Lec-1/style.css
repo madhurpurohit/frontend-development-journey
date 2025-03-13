@@ -1,0 +1,49 @@
+/* For all elements, class & id we can use only one "*" */
+* {
+  background: #000;
+}
+
+/* How to style using tag Syntax:- tagname */
+li {
+  color: green;
+}
+
+/* How to style using class Syntax:- .classname */
+.first {
+  color: aquamarine;
+  background-color: #222;
+}
+
+/* How to style using id Syntax:- #idname */
+#first-id {
+  color: darkorange;
+  background: #2c2c2c;
+}
+
+/* For grouping we can separate any tag, id & class using "," */
+h1,
+h3,
+p {
+  color: #fff;
+}
+
+/* Attribute Selector */
+p[draggable="true"] {
+  background-color: aquamarine;
+  color: #222;
+  font-size: 18px;
+}
+
+/* Descendent Selector " " */
+body ul li {
+  font-variant: small-caps;
+}
+
+/* Child Selector ">" */
+body > ul > li {
+  text-align: center;
+}
+
+/* Adjacent Sibling Selector "+"
+  General Sibling Selector "~"
+*/
