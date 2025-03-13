@@ -46,19 +46,15 @@ Each directory contains individual topics & projects with their own descriptions
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
    ```
-2. **Navigate to a Project**:
-   ```bash
-   cd path/to/project-folder
-   ```
-3. **Install Dependencies** (only use this in react, tailwind css, major project & js library directories):
+2. **Install Dependencies** (only use this in react, tailwind css, major project & js library directories):
    ```bash
    npm install
    ```
-4. **Run the Project**:
+3. **Run the Project**:
    ```bash
    npm start
    ```
-   *Note: Basic HTML/CSS code & projects can be opened directly in a browser.*
+   _Note: Basic HTML/CSS code & projects can be opened directly in a browser._
 
 Check individual project folders for specific instructions or requirements.
 
@@ -67,6 +63,7 @@ Check individual project folders for specific instructions or requirements.
 ## Learning Goals
 
 Through this repository, I aimed to:
+
 - Build a strong foundation in core web technologies (HTML, CSS, JS).
 - Master React.js for creating dynamic, interactive UIs.
 - Leverage TypeScript to write robust, maintainable code.
@@ -78,6 +75,7 @@ Through this repository, I aimed to:
 ## Why This Repository?
 
 This isn’t just a collection of code—it’s a testament to my dedication, curiosity, and growth as a developer. Each code part & project reflects hours of learning, debugging, and refining my skills. I’ve documented my process to demonstrate my ability to:
+
 - Learn new technologies quickly.
 - Apply theoretical knowledge to practical applications.
 - Write code that’s easy to understand and maintain.
@@ -87,6 +85,7 @@ This isn’t just a collection of code—it’s a testament to my dedication, cu
 ## Future Improvements
 
 As I continue to grow, I plan to:
+
 - Add more complex React projects with state management (e.g., Redux, React-TanStack-Query).
 - Integrate backend APIs for full-stack experience.
 - Optimize performance and accessibility across projects.
@@ -109,7 +108,5 @@ I’d love to hear your feedback or discuss my work! Feel free to reach out:
 - Thanks to everyone who’s contributed to my learning journey!
 
 ---
-*Last Updated: March 13, 2025*
----
 
-
+## _Last Updated: March 13, 2025_
