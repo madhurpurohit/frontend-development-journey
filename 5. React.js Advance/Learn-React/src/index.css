@@ -1,0 +1,100 @@
+@import "tailwindcss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif, serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 1460px;
+  height: 100%;
+}
+
+.container {
+  min-width: 100%;
+  padding: 0 20px;
+}
+
+/* h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 25px 10px;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 35px;
+  grid-template-rows: auto;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+*/
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ccc;
+    color: #000;
+  }
+
+  .container {
+    background-color: #eee;
+  }
+
+  li {
+    background-color: #fff;
+  }
+
+  button {
+    color: #000;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+
+  .container {
+    background-color: #333;
+  }
+
+  li {
+    background-color: #444;
+  }
+
+  button {
+    color: #fff;
+  }
+}
+
+@media (width<=720px) {
+  .grid-three-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

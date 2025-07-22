@@ -1,0 +1,41 @@
+.btn-div {
+  width: 200px;
+  height: 100px;
+  border-radius: 100px;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #777;
+}
+
+.toggle {
+  width: 80px;
+  height: 80px;
+  padding: 10px 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  transition: all 0.25s ease-in-out;
+  text-transform: uppercase;
+}
+
+.on {
+  background-color: #166534;
+}
+
+.off {
+  background-color: #777;
+}
+
+.on-position {
+  translate: 80px;
+  rotate: 360deg;
+  border: 3px solid #fff;
+}
+
+.off-position {
+  translate: 0;
+  background-color: #f66;
+}
