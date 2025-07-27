@@ -260,7 +260,7 @@ return ( jsx(…), jsx(…) );
 As we already know, above code is not
 valid JavaScript.
 
-[For Code ...](./Learn-React/src/Topics/Fragment.jsx)
+[For Code ...](./src/Topics/Fragment.jsx)
 
 ---
 
@@ -310,7 +310,7 @@ const returnGenre = () => {
 <p>{returnGenre()}</p>
 ```
 
-[For Code ...](./Learn-React/src/Topics/DynamicValue.jsx)
+[For Code ...](./src/Topics/DynamicValue.jsx)
 
 ---
 
@@ -329,7 +329,7 @@ return <p>{ age >= 18 && “You can vote” }</p>
 return <p>{ username || “Guest” }</p>
 ```
 
-There are multiples ways to get conditional values. See [Code Part](./Learn-React/src/Topics/ConditionalRendering.jsx)
+There are multiples ways to get conditional values. See [Code Part](./src/Topics/ConditionalRendering.jsx)
 
 ---
 
@@ -342,7 +342,15 @@ const student=[];
 
 **Output:** 0 (because 0 && ... returns 0)
 
-[For Code ..](./Learn-React/src/Topics/Interview1.jsx)
+**React does not render `false`, `null`, `undefined`, or `NaN` in the DOM. These values, when used in JSX, will result in nothing being displayed.**
+
+However, `0` and empty strings (`""`) are exceptions:
+
+- **`0`** is rendered in the DOM because it is considered a valid React node. This means that if `0` is the result of an expression, it will appear in your UI.
+
+- **Empty strings** (`""`) are also considered valid outputs and are rendered as well.
+
+[For Code ..](./src/Topics/Interview1.jsx)
 
 ---
 
@@ -397,9 +405,9 @@ export const NetflixCard=()=>{
 import {fName, f1Name} from "./file-path";
 ```
 
-1. [For Code on export ...](./Learn-React/src/Topics/Import&Export.jsx)
+1. [For Code on export ...](./src/Topics/Import&Export.jsx)
 
-2. [For Code on import ...](./Learn-React/src/ImportExportApp.jsx)
+2. [For Code on import ...](./src/ImportExportApp.jsx)
 
 ---
 
@@ -470,7 +478,7 @@ return <ul>{items}</ul>;
 </ul>
 ```
 
-[For Code ...](./Learn-React/src/Topics/Looping.jsx)
+[For Code ...](./src/Topics/Looping.jsx)
 
 ---
 
@@ -491,9 +499,9 @@ function Greet(props) {
 <Greet name="Dev" />
 ```
 
-1. [For Code Giving Props...](./Learn-React/src/Topics/Props.jsx)
+1. [For Code Giving Props...](./src/Topics/Props.jsx)
 
-2. [For Code Taking Props...](./Learn-React/src/Topics/PropPass.jsx)
+2. [For Code Taking Props...](./src/Topics/PropPass.jsx)
 
 ---
 
@@ -507,7 +515,7 @@ function Profile({ username, age }) {
 <Profile username="DevFlux" age={24}/>
 ```
 
-[For Code ...](./Learn-React/src/Topics/DestructuringProps.jsx)
+[For Code ...](./src/Topics/DestructuringProps.jsx)
 
 ---
 
@@ -557,7 +565,7 @@ function ProfileCard(props) {
 }
 ```
 
-1. [For Code ...](./Learn-React/src/Topics/ProfileChallenge.jsx)
+1. [For Code ...](./src/Topics/ProfileChallenge.jsx)
 
 2. ![To Visualize Flow](./Revision-Images/Props-flow.png)
 
@@ -578,7 +586,7 @@ import “./styles.css”
 - For global styles, you can import the CSS file in the index.js or App.js file to
   apply styles globally across the application.
 
-[For Code ...](./Learn-React/src/Topics/AddingExternalCSS.jsx)
+[For Code ...](./src/Topics/AddingExternalCSS.jsx)
 
 ---
 
@@ -601,7 +609,7 @@ We can also use inline styles similar to without React.js.
 
 ## 19. How we can add conditional styling in inline CSS?
 
-[For Code ...](./Learn-React/src/Topics/AddingExternalCSS.jsx)
+[For Code ...](./src/Topics/AddingExternalCSS.jsx)
 
 ---
 
@@ -642,7 +650,7 @@ We can also use inline styles similar to without React.js.
 
 A CSS-in-JS library to write CSS inside components.
 
-[Install Styled Component](./Learn-React/Installing-Guide.md)
+[Install Styled Component](./Installing-Guide.md)
 
 1. **Using Template Literals :-**
 
@@ -669,11 +677,11 @@ const Button = styled.button({
 
 ## 22. How to apply Tailwind CSS in JSX?
 
-[Installing Tailwind CSS](./Learn-React/Installing-Guide.md)
+[Installing Tailwind CSS](./Installing-Guide.md)
 
 To apply Tailwind CSS add classes directly to elements. But here class is a reserved keyword in JS, so we use className instead of class.
 
-[For Code ...](./Learn-React/src/Topics/TailwindCSS.jsx)
+[For Code ...](./src/Topics/TailwindCSS.jsx)
 
 ---
 
@@ -716,7 +724,7 @@ For example, handleClick, handleChange, handleSubmit.
 
 **Descriptive Names:** Function names should be descriptive and reflect what the function does. For example, handleFormSubmit instead of just handleSubmit if it's specifically for form submission.
 
-[For Code ...](./Learn-React/src/Topics/Event/EventHandling.jsx)
+[For Code ...](./src/Topics/Event/EventHandling.jsx)
 
 ---
 
@@ -744,7 +752,7 @@ function WelcomeUser({ onClick }){
 - Instead of onClick here, you can also name it onButtonClick, name doesn’t matter.
 - Passing functions to another component is not just for events but you can pass any functions you want to other component as props.
 
-[For Code ...](./Learn-React/src/Topics/Event/EventProps.jsx)
+[For Code ...](./src/Topics/Event/EventProps.jsx)
 
 ---
 
@@ -754,7 +762,7 @@ function WelcomeUser({ onClick }){
 - When an event occurs on an element in a React component, such as a button click, the event is first captured at the target element and then bubbles up through the parent elements, triggering any event handlers that have been defined along the way. This allows you to handle events at different levels of the component hierarchy.
 - React provides a way to stop event propagation using the stopPropagation() method, which can be called on the event object within an event handler. This method prevents the event from bubbling up further in the DOM, ensuring that only the event handler on the target element is triggered.
 
-[For Code ...](./Learn-React/src/Topics/Event/EventPropagation.jsx)
+[For Code ...](./src/Topics/Event/EventPropagation.jsx)
 
 ---
 
@@ -765,7 +773,7 @@ function WelcomeUser({ onClick }){
 
 ![useState Hook Diagram](./Revision-Images/useStateHook.png)
 
-[For Code ...](./Learn-React/src/Topics/Hooks/UseState/UseStateHook.jsx)
+[For Code ...](./src/Topics/Hooks/UseState/UseStateHook.jsx)
 
 **Important Points :-**
 
@@ -798,7 +806,7 @@ In React, state is a way to store and manage data that can change over the lifet
 - Updating State: When you call the updater function, React schedules a re-render of the component with the new state value.
 - Preservation of State: React maintains state between renders. When a component re-renders, it doesn't reinitialize the state. Instead, it uses the preserved state from the previous render.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/StateWorking.jsx)
+[For Code ...](./src/Topics/Hooks/StateWorking.jsx)
 
 ---
 
@@ -842,7 +850,7 @@ Derived state is any state that can be computed based on other state or props. I
 - Consistency: Ensures that derived values are always in sync with the underlying state or props.
 - Simplicity: Reduces the complexity of state management by minimizing the number of state variables.
 
-[For Code...](./Learn-React/src/Topics/Hooks/DerivedState.jsx)
+[For Code...](./src/Topics/Hooks/DerivedState.jsx)
 
 ---
 
@@ -866,7 +874,7 @@ Read PDF page no. 103-109.
 
 2. Keys must not change.
 
-[For Code File ...](./Learn-React/src/Topics/Keys.jsx)
+[For Code File ...](./src/Topics/Keys.jsx)
 
 [For PDF ...](./React.js%202025%20Course%20Full%20Notes.pdf) Page No. 126-139
 
@@ -915,7 +923,7 @@ const result2 = undefined ?? 'World'; // 'World'
 const result3 = '' ?? 'Fallback'; // ''
 ```
 
-[For Code ...](./Learn-React/src/Topics/Hooks/ShortCircuit.jsx)
+[For Code ...](./src/Topics/Hooks/ShortCircuit.jsx)
 
 ---
 
@@ -929,7 +937,7 @@ const result3 = '' ?? 'Fallback'; // ''
 - You can also create your own custom hooks by creating functions starting with use\_\_\_\_. This ensures that React can identify it as a Hook. (ex. useFetch, useForm)
 - Ensure Hooks are Called in the Same Order. This allows React to properly preserve the state of Hooks between re-renders.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/ShortCircuit.jsx)
+[For Code ...](./src/Topics/Hooks/ShortCircuit.jsx)
 
 ---
 
@@ -971,7 +979,7 @@ This means:
 - Event Handling: Changes are directly handled by DOM events (onchange, onblur, etc.).
 - Accessing Form Data: Form data is accessed through refs or DOM traversal methods, not through React state.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/UseState/Controlled.jsx)
+[For Code ...](./src/Topics/Hooks/UseState/Controlled.jsx)
 
 ---
 
@@ -1000,7 +1008,7 @@ Others ….
 - Updating the browser's DOM.
 - Logging data to the console
 
-[For Code ...](./Learn-React/src/Topics/Hooks/UseEffect/UseEffectHook.jsx)
+[For Code ...](./src/Topics/Hooks/UseEffect/UseEffectHook.jsx)
 
 ---
 
@@ -1014,7 +1022,7 @@ Others ….
 
 - Uncontrolled components manage their own state internally and are typically used with refs.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/UseRef/UseRefHook.jsx)
+[For Code ...](./src/Topics/Hooks/UseRef/UseRefHook.jsx)
 
 ---
 
@@ -1024,7 +1032,7 @@ React forwardRef allows parent components to move down (or “forward”) refs t
 
 ![useForwardRef Hook](./Revision-Images/useForwardRef.png)
 
-[For Code Part...](./Learn-React/src/Topics/Hooks/ForwardRef/ForwardHook.jsx)
+[For Code Part...](./src/Topics/Hooks/ForwardRef/ForwardHook.jsx)
 
 ---
 
@@ -1044,7 +1052,7 @@ const id = useId()
 
 **Note:** useId should not be used to generate keys in a list.
 
-[For Code Part ...](./Learn-React/src/Topics/Hooks/UseId/UseIdHook.jsx)
+[For Code Part ...](./src/Topics/Hooks/UseId/UseIdHook.jsx)
 
 ---
 
@@ -1058,7 +1066,7 @@ const id = useId()
 - Prop drilling may result in boilerplate code as each intermediate component needs to accept and pass down the props even if it doesn't use them.
 - If any state is changed than all it's children will re-render, even if they don't use the props which is passed to passing it's child.
 
-[For Code Part...](./Learn-React/src/Topics/Hooks/ContextApi/PropDrilling.jsx)
+[For Code Part...](./src/Topics/Hooks/ContextApi/PropDrilling.jsx)
 
 ---
 
@@ -1080,11 +1088,11 @@ const id = useId()
 
 In the Context API, the data provided by a context can only be accessed by the components that are its children within the component tree. This means that any component that needs access to the context data must be a descendant of the provider component that supplies the context value.
 
-[For Context Creation Part...](./Learn-React/src/Topics/Hooks/ContextApi/GlobalStore.jsx)
+[For Context Creation Part...](./src/Topics/Hooks/ContextApi/GlobalStore.jsx)
 
-[For Provider Part...](./Learn-React/src/Topics/Hooks/ContextApi/ContextApiHook.jsx)
+[For Provider Part...](./src/Topics/Hooks/ContextApi/ContextApiHook.jsx)
 
-[For Consuming Part...](./Learn-React/src/Topics/Hooks/ContextApi/Home.jsx)
+[For Consuming Part...](./src/Topics/Hooks/ContextApi/Home.jsx)
 
 ---
 
@@ -1104,7 +1112,7 @@ It returns an array containing the current state and a dispatch function.
 
 ![useReducer Hook](./Revision-Images/useReducre.png)
 
-[For Code ...](./Learn-React/src/Topics/Hooks/UseReducer/UseReducerHook.jsx)
+[For Code ...](./src/Topics/Hooks/UseReducer/UseReducerHook.jsx)
 
 ---
 
@@ -1118,7 +1126,7 @@ OR
 
 React.memo() is a higher-order component that we can use to wrap components that we do not want to re-render unless props within them change
 
-[For Code ...](./Learn-React/src/Topics/Hooks/ReactMemo/ReactMemoHook.jsx)
+[For Code ...](./src/Topics/Hooks/ReactMemo/ReactMemoHook.jsx)
 
 ---
 
@@ -1137,13 +1145,13 @@ const memoizedValue = useMemo( () => {
 - Useful for optimizing performance in situations where calculations or operations are computationally expensive.
 - Overusing useMemo might lead to unnecessary complexity and impact readability.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/UseMemo/UseMemoHook.jsx)
+[For Code ...](./src/Topics/Hooks/UseMemo/UseMemoHook.jsx)
 
 ---
 
 ## 46. When we use useMemo() Hook instead of React.memo()/memo() Hook?
 
-[For Code Part...](./Learn-React/src/Topics/Hooks/UseMemo/WhyUseMemo.jsx)
+[For Code Part...](./src/Topics/Hooks/UseMemo/WhyUseMemo.jsx)
 
 ---
 
@@ -1153,7 +1161,7 @@ const memoizedValue = useMemo( () => {
 - Useful for optimizing performance in scenarios where a function is passed as a prop to child components, preventing unnecessary re-renders.
 - Helps in avoiding re-renders of child components when the parent component rerenders but the function reference remains the same.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/UseCallback/UseCallbackHook.jsx)
+[For Code ...](./src/Topics/Hooks/UseCallback/UseCallbackHook.jsx)
 
 ---
 
@@ -1171,7 +1179,7 @@ const memoizedValue = useMemo( () => {
 - The DOM handles the input's value, and React doesn't necessarily know or control it explicitly.
 - Refs are often used to interact with the DOM element directly.
 
-[For Code Part...](./Learn-React/src/Topics/Hooks/UseState/Controlled.jsx)
+[For Code Part...](./src/Topics/Hooks/UseState/Controlled.jsx)
 
 ---
 
@@ -1193,11 +1201,11 @@ Creating custom hooks in React is a powerful way to encapsulate logic and make y
 
 4. Keep Hooks Pure: Hooks should be free from side effects and return values or functions that the component can use.
 
-[For Context Creation Part...](./Learn-React/src/Topics/Hooks/CustomHooks/GlobalStoreCustomHook.jsx)
+[For Context Creation Part...](./src/Topics/Hooks/CustomHooks/GlobalStoreCustomHook.jsx)
 
-[For Provider Part...](./Learn-React/src/Topics/Hooks/CustomHooks/ContextApiForCustom.jsx)
+[For Provider Part...](./src/Topics/Hooks/CustomHooks/ContextApiForCustom.jsx)
 
-[For Consume Part...](./Learn-React/src/Topics/Hooks/CustomHooks/CustomHook.jsx)
+[For Consume Part...](./src/Topics/Hooks/CustomHooks/CustomHook.jsx)
 
 ---
 
@@ -1209,12 +1217,8 @@ use is a React API that lets you read the value of a resource like a Promise or 
 const value = use(resource);
 ```
 
-[For Code Part...](./Learn-React/src/Topics/Hooks/ContextApi/About.jsx)
+[For Code Part...](./src/Topics/Hooks/ContextApi/About.jsx)
 
 [React Docs For use API](https://react.dev/reference/react/use)
-
----
-
-## 52. What is React Router?
 
 ---
