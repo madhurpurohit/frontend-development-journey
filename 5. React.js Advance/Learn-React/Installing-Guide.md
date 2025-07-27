@@ -102,4 +102,10 @@ npm i react-icons
 bun i react-icons
 ```
 
+**Step2 :-** Go to official website to get the icon.
 
+[React-icons website Link...](https://react-icons.github.io/react-icons/)
+
+## React-Loading Component
+
+[Visit the website..](https://react-loading-indicators.netlify.app/)

@@ -1,6 +1,13 @@
 # Folder Flow & Structure
 
+main.jsx File Flow Structure.
 ![Folder & File Flow](./Revision-Images/FolderStruture3X.svg)
+
+hook.jsx File Flow Structure.
+![hook.jsx File Flow](./Revision-Images/Hooks-File-Flow.svg)
+
+router.jsx File Flow Structure
+![router.jsx File Flow](./Revision-Images/)
 
 ## 1. What is React & Why we use it?
 
@@ -1001,14 +1008,13 @@ Others ….
 
 - useRef is a React Hook that lets you reference a value that’s not needed for rendering.
 - Unlike states, it’s directly mutable.
-- You can access value of it’s using yourRef.current;
+- You can access value of it’s using ourRef.current;
 
 **Uncontrolled Components:**
 
-- Uncontrolled components manage their own state internally and are typically used with
-  refs.
+- Uncontrolled components manage their own state internally and are typically used with refs.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/)
+[For Code ...](./Learn-React/src/Topics/Hooks/UseRef/UseRefHook.jsx)
 
 ---
 
@@ -1018,9 +1024,11 @@ React forwardRef allows parent components to move down (or “forward”) refs t
 
 ![useForwardRef Hook](./Revision-Images/useForwardRef.png)
 
+[For Code Part...](./Learn-React/src/Topics/Hooks/ForwardRef/ForwardHook.jsx)
+
 ---
 
-## 40. WHat is useId()?
+## 40. What is useId()?
 
 useId is a React Hook for generating unique IDs that can be passed to accessibility attributes. It helps to ensure that each instance of a component gets a unique ID, which is useful for associating labels with input fields and other elements
 
@@ -1036,11 +1044,51 @@ const id = useId()
 
 **Note:** useId should not be used to generate keys in a list.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/)
+[For Code Part ...](./Learn-React/src/Topics/Hooks/UseId/UseIdHook.jsx)
 
 ---
 
-## 41. What is useReducer()?
+## 41. What is Prop Drilling?
+
+- Props drilling is a pattern in React where you pass data from a parent component to deeply nested child components through multiple layers of components, even if some of the intermediate components don't need the data.
+- As your component tree deepens, prop drilling can make the code more complex and harder to maintain
+
+- Passing upto 1 or 2 levels is probably fine but might be harder to maintain more than that.
+- When a prop needs to be passed through many levels, making changes to the component hierarchy or adding/removing props can become cumbersome.
+- Prop drilling may result in boilerplate code as each intermediate component needs to accept and pass down the props even if it doesn't use them.
+- If any state is changed than all it's children will re-render, even if they don't use the props which is passed to passing it's child.
+
+[For Code Part...](./Learn-React/src/Topics/Hooks/ContextApi/PropDrilling.jsx)
+
+---
+
+## 42. What is Context Api?
+
+**Context API:** A way to pass data through the component tree without having to pass props down manually at every level.
+
+- createContext: Creates a Context object.
+- Provider: A component that provides the context value to its children.
+- useContext (Consumer): A hook that allows you to consume a context.
+
+**Initial Value:** We don't pass an initial value directly to the context.
+
+**Context Creation:** createContext returns a Context component, not a variable. The first letter of the Context component's name must be uppercase.
+
+**Provider Component:** The Provider is a property of the Context component. We pass the value to the Provider, which makes it accessible to child components. The value should be passed inside `double curly braces {{ }}` if it’s more then one.
+
+**Consuming Context Data:** To access the context data, we use the useContext hook. As a parameter, we pass the entire context to useContext to access all values provided by the Provider.
+
+In the Context API, the data provided by a context can only be accessed by the components that are its children within the component tree. This means that any component that needs access to the context data must be a descendant of the provider component that supplies the context value.
+
+[For Context Creation Part...](./Learn-React/src/Topics/Hooks/ContextApi/GlobalStore.jsx)
+
+[For Provider Part...](./Learn-React/src/Topics/Hooks/ContextApi/ContextApiHook.jsx)
+
+[For Consuming Part...](./Learn-React/src/Topics/Hooks/ContextApi/Home.jsx)
+
+---
+
+## 43. What is useReducer()?
 
 ```
 const [state, dispatch] = useReducer(reducer, initialState);
@@ -1056,11 +1104,11 @@ It returns an array containing the current state and a dispatch function.
 
 ![useReducer Hook](./Revision-Images/useReducre.png)
 
-[For Code ...](./Learn-React/src/Topics/Hooks/)
+[For Code ...](./Learn-React/src/Topics/Hooks/UseReducer/UseReducerHook.jsx)
 
 ---
 
-## 42. WHat is React.memo()?
+## 44. WHat is React.memo()?
 
 - The React.memo function is used for memoization of functional components.
 - If the props of a memoized component have not changed, React skips the rendering for that component, using the cached result instead.
@@ -1070,11 +1118,11 @@ OR
 
 React.memo() is a higher-order component that we can use to wrap components that we do not want to re-render unless props within them change
 
-[For Code ...](./Learn-React/src/Topics/Hooks/)
+[For Code ...](./Learn-React/src/Topics/Hooks/ReactMemo/ReactMemoHook.jsx)
 
 ---
 
-## 43. What is useMemo() Hook?
+## 45. What is useMemo() Hook?
 
 ```
 const memoizedValue = useMemo( () => {
@@ -1089,21 +1137,27 @@ const memoizedValue = useMemo( () => {
 - Useful for optimizing performance in situations where calculations or operations are computationally expensive.
 - Overusing useMemo might lead to unnecessary complexity and impact readability.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/)
+[For Code ...](./Learn-React/src/Topics/Hooks/UseMemo/UseMemoHook.jsx)
 
 ---
 
-## 44. What is useCallback() Hook?
+## 46. When we use useMemo() Hook instead of React.memo()/memo() Hook?
+
+[For Code Part...](./Learn-React/src/Topics/Hooks/UseMemo/WhyUseMemo.jsx)
+
+---
+
+## 47. What is useCallback() Hook?
 
 - useCallback is a React hook used to memoize functions, preventing unnecessary re-creation of functions on each render.
 - Useful for optimizing performance in scenarios where a function is passed as a prop to child components, preventing unnecessary re-renders.
 - Helps in avoiding re-renders of child components when the parent component rerenders but the function reference remains the same.
 
-[For Code ...](./Learn-React/src/Topics/Hooks/)
+[For Code ...](./Learn-React/src/Topics/Hooks/UseCallback/UseCallbackHook.jsx)
 
 ---
 
-## 45. What is Controlled form input vs Uncontrolled form input?
+## 48. What is Controlled form input vs Uncontrolled form input?
 
 **Controlled input :-**
 
@@ -1117,22 +1171,50 @@ const memoizedValue = useMemo( () => {
 - The DOM handles the input's value, and React doesn't necessarily know or control it explicitly.
 - Refs are often used to interact with the DOM element directly.
 
+[For Code Part...](./Learn-React/src/Topics/Hooks/UseState/Controlled.jsx)
+
 ---
 
-## 46. What is the difference between useCallback(), useMemo() & React.memo()?
+## 49. What is the difference between useCallback(), useMemo() & React.memo()?
 
 ![Difference](./Revision-Images/Differnce.png)
 
 ---
 
-## 47.
+## 50. What is Custom Hook?
+
+Creating custom hooks in React is a powerful way to encapsulate logic and make your components cleaner and more maintainable.
+
+1. Prefix with use: Custom hooks must start with the word use. This convention ensures that hooks are easily identifiable and adhere to the hook rules.
+
+2. Use Built-in Hooks: Custom hooks should utilize React's built-in hooks (e.g., useState, useEffect, useContext) to leverage React's state and lifecycle features.
+
+3. Avoid Side Effects Outside Hooks: Side effects (e.g., data fetching, subscriptions) should be managed within hooks using useEffect or other appropriate hooks.
+
+4. Keep Hooks Pure: Hooks should be free from side effects and return values or functions that the component can use.
+
+[For Context Creation Part...](./Learn-React/src/Topics/Hooks/CustomHooks/GlobalStoreCustomHook.jsx)
+
+[For Provider Part...](./Learn-React/src/Topics/Hooks/CustomHooks/ContextApiForCustom.jsx)
+
+[For Consume Part...](./Learn-React/src/Topics/Hooks/CustomHooks/CustomHook.jsx)
 
 ---
 
-## 48.
+## 51. What is use Api?
+
+use is a React API that lets you read the value of a resource like a Promise or context.
+
+```
+const value = use(resource);
+```
+
+[For Code Part...](./Learn-React/src/Topics/Hooks/ContextApi/About.jsx)
+
+[React Docs For use API](https://react.dev/reference/react/use)
 
 ---
 
-## 49.
+## 52. What is React Router?
 
 ---

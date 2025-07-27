@@ -9,9 +9,9 @@ import "./index.css";
 // import ImportExportApp from "./ImportExportApp";
 // import App from "./App";
 // import EventApp from "./EventApp";
-import StatesApp from "./StatesApp";
 import ProjectApp from "./ProjectApp";
-import { Keys } from "./Topics/Keys";
+// import { Keys } from "./Topics/Keys";
+// import StatesApp from "./StatesApp";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -23,8 +23,8 @@ createRoot(document.getElementById("root")).render(
     {/* <ImportExportApp /> */}
     {/* <App /> */}
     {/* <EventApp /> */}
-    <StatesApp />
-    {/* <ProjectApp /> */}
+    <ProjectApp />
     {/* <Keys /> */}
+    {/* <StatesApp /> */}
   </StrictMode>
 );

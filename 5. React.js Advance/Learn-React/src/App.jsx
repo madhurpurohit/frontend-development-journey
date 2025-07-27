@@ -1,7 +1,7 @@
 import "./App.css";
-import { AddCSS } from "./Topics/AddingExternalCSS";
-import NetflixSeriesLooping from "./Topics/Looping";
-import Profile from "./Topics/ProfileChallenge";
+// import { AddCSS } from "./Topics/AddingExternalCSS";
+// import NetflixSeriesLooping from "./Topics/Looping";
+// import Profile from "./Topics/ProfileChallenge";
 import Props from "./Topics/Props";
 
 function App() {

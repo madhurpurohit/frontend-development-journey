@@ -12,6 +12,7 @@ export const UseStateHook = () => {
   //   let array = useState();
   //   console.log(array);
 
+  //* When we use useState then it will provide an array of two element where the first element is state variable & the second element is updater function. That's why we always destructure this array form, when we use useState, just like below code line.
   const [count, setCount] = useState(0);
 
   const handleIncrementButtonClick = () => {
