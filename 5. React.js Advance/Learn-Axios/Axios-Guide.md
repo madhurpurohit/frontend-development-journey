@@ -1,11 +1,5 @@
 # Axios Study Guide
 
-# Folder Structure Diagram
-
-![File & Folder Structure]()
-
----
-
 ## 1. What is Axios?
 
 Axios is a promise-based HTTP library that helps you easily communicate with servers or APIs over the internet. It allows your website or app to send and receive data from a server, like fetching information, submitting forms, or updating content without reloading the entire page.

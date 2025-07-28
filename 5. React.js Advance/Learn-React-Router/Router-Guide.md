@@ -1,11 +1,5 @@
 # React Router Study Guide
 
-# Folder Structure.
-
-![Folder Structure or File WorkFlow]()
-
----
-
 ## 1. What is React Router & types of router?
 
 React-Router is not the part of official React.js, but it's a separate library which helps to manage routing in our project.
