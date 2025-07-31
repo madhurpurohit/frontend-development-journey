@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { NavLink } from "react-router";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,33 +10,32 @@ export const Header = () => {
   };
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Course", href: "#" },
-    { name: "Library", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Axios", href: "/fetchold" },
+    { name: "ReactQuery", href: "/fetchrq" },
   ];
 
   return (
     <>
       {/* Main Navigation Bar (Header) */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md shadow-sm">
         <div className="max-w-[1460px] mx-auto flex items-center justify-between p-6">
           {/* Logo/Brand Name */}
-          <a href="#" className="text-white text-2xl font-bold">
+          <NavLink to="/" className="text-white text-2xl font-bold">
             DevFlux
-          </a>
+          </NavLink>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-white font-medium transition-colors duration-300 hover:text-gray-300"
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
           </nav>
         </div>
@@ -68,14 +68,14 @@ export const Header = () => {
           <h2 className="text-2xl font-bold text-white mb-8">Menu</h2>
           <nav className="flex flex-col space-y-2">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 onClick={toggleMenu}
                 className="text-white text-lg font-medium p-4 rounded-lg hover:bg-white/20 transition-all duration-200 ease-in-out transform hover:translate-x-2"
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
           </nav>
         </div>

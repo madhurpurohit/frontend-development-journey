@@ -1,4 +1,4 @@
-export const Home = () => {
+export const About = () => {
   return (
     <>
       <div
@@ -12,7 +12,7 @@ export const Home = () => {
           <main className="flex items-center justify-center h-screen px-6 pt-24">
             <div className="text-center text-white">
               <h1 className="text-5xl md:text-7xl font-bold drop-shadow-lg">
-                Welcome to Home Page
+                Welcome to About Page
               </h1>
               <p className="mt-4 text-xl drop-shadow-md">Learn React Query.</p>
             </div>
