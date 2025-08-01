@@ -14,6 +14,7 @@ export const Header = () => {
     { name: "About", href: "/about" },
     { name: "Axios", href: "/fetchold" },
     { name: "ReactQuery", href: "/fetchrq" },
+    { name: "InfiniteScroll", href: "/infinitescroll" },
   ];
 
   return (
@@ -32,7 +33,7 @@ export const Header = () => {
               <NavLink
                 key={item.name}
                 to={item.href}
-                className="text-white font-medium transition-colors duration-300 hover:text-gray-300"
+                className="text-white font-medium transition-colors duration-300 hover:text-gray-300 uppercase tracking-widest"
               >
                 {item.name}
               </NavLink>
@@ -72,7 +73,7 @@ export const Header = () => {
                 key={item.name}
                 to={item.href}
                 onClick={toggleMenu}
-                className="text-white text-lg font-medium p-4 rounded-lg hover:bg-white/20 transition-all duration-200 ease-in-out transform hover:translate-x-2"
+                className="text-white text-lg font-medium p-4 rounded-lg hover:bg-white/20 transition-all duration-200 ease-in-out transform hover:translate-x-2 uppercase tracking-widest"
               >
                 {item.name}
               </NavLink>

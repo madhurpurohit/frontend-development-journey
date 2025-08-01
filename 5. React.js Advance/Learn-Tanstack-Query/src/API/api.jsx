@@ -31,7 +31,20 @@ export const deleteData = (id) => {
 };
 
 // To update data.
-
 export const updateData = (id) => {
   return api.patch(`/posts/${id}`, { title: "I have updated this news." });
+};
+
+// To Infinite Scroll
+export const fetchInfinite = async ({ pageParam = 1 }) => {
+  try {
+    const res = await api.get(
+      `https://api.github.com/users?per_page=10&page=${pageParam}`
+    );
+
+    return res.status === 200 ? res.data : [];
+  } catch (error) {
+    console.log(error);
+    // return undefined;
+  }
 };

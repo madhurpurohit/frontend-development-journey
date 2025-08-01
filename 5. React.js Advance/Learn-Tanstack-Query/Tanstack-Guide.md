@@ -17,10 +17,9 @@
 13. [Polling](#13-how-to-fetch-data-like-real-time-polling-or-constantly-fetch-fresh-data-even-in-background)
 14. [Pagination](#14-how-to-create-pagination)
 15. [useMutation Hook](#15-what-is-usemutation-hook)
-16. []()
-17. []()
-18. []()
-19. []()
+16. [Infinite Scrolling](#16-how-to-get-infinite-scrolling)
+17. [Logic Infinite Scroll Using Pure Js](#17-how-to-know-that-user-has-reach-bottom-using-pure-javascript)
+18. [Infinite Scroll Using React Intersection Observer](#18-how-to-make-infinite-scroll-feature-with-using-react-intersection-observer)
 
 ---
 
@@ -366,26 +365,128 @@ const deleteMutation = useMutation({
 
 - Gives full control over query behaviors.
 
+**All methods given by useQueryClient():**
+
+| Method                                       | Purpose                          |
+| -------------------------------------------- | -------------------------------- |
+| `useQueryClient()`                           | Access the query client in React |
+| `queryClient.invalidateQueries(['key'])`     | Refetch data by key              |
+| `queryClient.setQueryData(['key'], updater)` | Manually update cached data      |
+| `queryClient.getQueryData(['key'])`          | Read cached data                 |
+| `queryClient.removeQueries(['key'])`         | Remove query from cache          |
+
+1. ✅ Invalidate a query (Refetch the data)
+
+Imagine we updated a user profile and want to refresh the "users" query.
+
+```
+const queryClient = useQueryClient();
+
+const handleSave = async () => {
+  await updateUserData();
+
+  // Tell TanStack: "Refetch the users data!"
+  queryClient.invalidateQueries(['users']);
+};
+```
+
+2. 🔍 Read cached data without triggering a new fetch
+
+```
+const cachedUser = queryClient.getQueryData(['user', userId]);
+console.log(cachedUser);
+```
+
+Useful when we want to check if data exists before refetching or navigating.
+
 [For Code Part...](./src/Pages/FetchRQ.jsx)
 
 ---
 
-## 16.
+## 16. How to get Infinite Scrolling?
+
+For infinite scrolling we use `useInfiniteQuery()` hook. & inside this we have a property `getNextPageParam` so we use this also.
+
+**Syntax:**
+
+```
+const {
+  fetchNextPage,
+  fetchPreviousPage,
+  hasNextPage,
+  hasPreviousPage,
+  isFetchingNextPage,
+  isFetchingPreviousPage,
+  promise,
+  ...result
+} = useInfiniteQuery({
+  queryKey,
+  queryFn: ({ pageParam }) => fetchPage(pageParam),
+  initialPageParam: 1,
+  ...options,
+  getNextPageParam: (lastPage, allPages, lastPageParam, allPageParams) =>
+    lastPage.nextCursor,
+  getPreviousPageParam: (firstPage, allPages, firstPageParam, allPageParams) =>
+    firstPage.prevCursor,
+})
+```
+
+![Working of useInfiniteQuery](./public/Working-useInfinteQuery.svg)
+
+[For More Go to Official Documentation](https://tanstack.com/query/latest/docs/framework/react/reference/useInfiniteQuery)
+
+[For Code Part...](./src/Pages/InfiniteScroll.jsx)
 
 ---
 
-## 17.
+## 17. How to know that user has reach bottom using pure JavaScript?
+
+For this we use Scroll Events.
+
+**`window.innerHeight`:** The height of the visible part of the webpage (the viewport).
+
+**`window.scrollY`:** The amount of pixels the user has scrolled down the page.
+
+**`document.documentElement.scrollHeight`:** The total height of the webpage, including the part which is not visible without scrolling.
+
+When the sum of `window.innerHeight` & `window.scrollY` is approximately equal to `document.documentElement.scrollHeight - 1`, the user is near the bottom of the page.
+
+[For Code Part...](./src/Pages/InfiniteScroll.jsx)
 
 ---
 
-## 18.
+## 18. How to make infinite scroll feature with using React Intersection Observer?
 
----
+[For Installation Go to Official Website](https://www.npmjs.com/package/react-intersection-observer)
 
-## 19.
+Or use this below command:
 
----
+```
+bun i react-intersection-observer
+```
 
-## 20.
+Than we use `useInView` hook which will provide object with keys.
+
+```
+import { useInView } from "react-intersection-observer";
+
+const Component = () => {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  return (
+  // For recognizing the last thing/element on that page we pass this ref which is given by useInView hook, to ensure that this is the last item or element & now you can change inView value to True.
+    <div ref={ref}>
+      <h2>{`Header inside viewport ${inView}.`}</h2>
+    </div>
+  );
+};
+```
+
+In this threshold: 1, means whenever our touch the bottom than inView value is changed into true otherwise it remains false.
+
+[For Code Part...](./src/Pages/InfiniteScroll.jsx)
 
 ---

@@ -18,6 +18,9 @@ Welcome to my React learning repository. This repository serves as a living docu
 10. [Routing with React Router](#️-routing-with-react-router)
 11. [Environment & Best Practices](#️-environment--best-practices)
 12. [API Communication with Axios](#-api-communication-with-axios)
+13. [Advanced Server State Management with TanStack Query](#-advanced-server-state-management-with-tanstack-query)
+
+---
 
 ## 🚀 Core React Concepts
 
@@ -162,5 +165,53 @@ A crucial skill for modern web development is interacting with APIs. I've learne
   - **Update (PUT/PATCH):** Modifying existing data using axios.put() or axios.patch().
 
   - **Delete (DELETE):** Removing data using axios.delete().
+
+---
+
+## 🔄 Advanced Server State Management with TanStack Query
+
+I've explored TanStack Query (formerly React Query) to declaratively manage server state, treating it as a first-class citizen in React applications.
+
+- **Core Concepts & Advantages:**
+
+  - **What is TanStack Query?:** It's a powerful library for fetching, caching, synchronizing, and updating server state. It's not a global state manager like Redux, but a specialized tool for handling asynchronous data.
+
+  - **Why Use It?:** To eliminate complex and boilerplate-heavy data-fetching logic using `useEffect` and `useState`. It provides a declarative, hook-based API that handles caching, background refetching, and stale data out of the box.
+
+  - **Advantages:** Key benefits include improved performance through caching, reduced network requests, automatic UI updates, and a better user experience with features like optimistic updates and pagination.
+
+- **Setup & Debugging:**
+
+  - **Installation:** Learned to install the library via a package manager: `npm install @tanstack/react-query`.
+
+  - **Provider Setup:** Understood the need to wrap the application with `QueryClientProvider` and provide a `QueryClient` instance to it.
+
+  - **React Query Devtools:** Integrated the Devtools to visualize the internal state of all queries, inspect cached data, and debug fetching behavior in real-time.
+
+- **Fetching Data (`useQuery`):**
+
+  - **The `useQuery` Hook:** Mastered the primary hook for fetching and caching data. It requires a unique query key and an async function to fetch the data.
+
+  - **Handling Loading & Error States:** `useQuery` returns status flags like `isLoading`, `isError`, and `error` objects, which simplifies handling UI states without manual state management.
+
+- **Caching & Refetching Control:**
+
+  - **`staleTime`:** Controls how long data is considered "fresh," preventing unnecessary network requests for data that hasn't changed.
+
+  - **`gcTime` (Garbage Collection Time):** Determines how long inactive query data remains in the cache before being garbage collected.
+
+  - **Real-Time Polling:** Used the `refetchInterval` option to automatically refetch data at a specified interval, keeping the UI in sync with the server.
+
+- **Mutating Data (`useMutation`):**
+
+  - **The `useMutation` Hook:** Used for creating, updating, or deleting data. It provides helper functions like `.mutate()` to trigger the mutation.
+
+  - **Invalidating Queries:** Leveraged `useQueryClient` to invalidate cached queries after a successful mutation, which automatically triggers a refetch of stale data and keeps the UI consistent.
+
+- **Advanced UI Patterns:**
+
+  - **Pagination:** Implemented paginated queries, using `placeholderData` (now `keepPreviousData` in v5) to keep showing old data while new data is being fetched, preventing jarring UI shifts.
+
+  - **Infinite Scrolling:** Understood how to use `useInfiniteQuery` to build "load more" or infinite scroll interfaces by fetching data in pages and appending it to the existing data set.
 
 ---
