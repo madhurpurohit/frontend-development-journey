@@ -1,11 +1,7 @@
-import "./App.css";
+import { Todo } from "./Pages/Todo";
 
 function App() {
-  return (
-    <div className="max-w-screen min-h-screen">
-      <h1>Hello Redux</h1>
-    </div>
-  );
+  return <Todo />;
 }
 
 export default App;

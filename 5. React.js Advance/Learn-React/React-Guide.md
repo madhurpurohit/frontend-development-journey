@@ -8,8 +8,63 @@ main.jsx File Flow Structure.
 hook.jsx File Flow Structure.
 ![hook.jsx File Flow](./Revision-Images/Hooks-File-Flow.svg)
 
-router.jsx File Flow Structure
-![router.jsx File Flow](./Revision-Images/)
+---
+
+# Table of Content
+
+1. [React & Its Use](#1-what-is-react--why-we-use-it)
+2. [Declarative & Imperative](#2-what-is-declarative--imperative)
+3. [Making React](#3-how-to-make-react)
+4. [Bundlers (Parcel & Vite)](#4-what-is-bundlers-like-parcel--vite)
+5. [Package Managers & Installation](#5-what-is-npm-pnpm-bun-yarn--how-to-install-react--react-dom)
+6. [Modules & Components](#6-what-is-module--components)
+7. [Fragments](#7-what-is-fragments)
+8. [JSX](#8-what-is-jsx)
+9. [Dynamic Values in JSX](#9-how-to-take-any-dynamic-value-like-variable-object-function-expressions-etc)
+10. [Conditional Rendering](#10-how-to-take-conditional-values-in-jsx)
+11. [JSX Output Quirks](#11-what-is-the-output-of-this-given-jsx)
+12. [Export & Import Types](#12-how-many-types-we-can-export--import)
+13. [Looping & Keys in JSX](#13-looping-in-jsx-why-we-use-key-attributeprop)
+14. [Props](#14-what-is-props--how-to-use-it-or-pass-it-in-jsx)
+15. [Destructuring Props](#15-how-to-destructuring-props)
+16. [JSX as Props](#16-how-to-pass-jsx-as-props--how-to-print-jsx-which-is-present-inside-any-property-of-a-component)
+17. [External CSS](#17-how-we-can-add-external-css-to-any-component)
+18. [Inline CSS](#18-how-we-can-add-inline-css)
+19. [Conditional Inline CSS](#19-how-we-can-add-conditional-styling-in-inline-css)
+20. [CSS Modules](#20-what-is-css-modules--difference-between-scoped--reusable-styles)
+21. [Styled Components](#21-what-is-styled-component)
+22. [Tailwind CSS in JSX](#22-how-to-apply-tailwind-css-in-jsx)
+23. [Event Handling & SyntheticBaseEvent](#23-what-is-event-handling)
+24. [Events as Props](#24-how-to-pass-events-as-props)
+25. [Event Propagation](#25-event-propagation-in-react)
+26. [State & useState Hook](#26-what-is-react-state--usestate-hook)
+27. [Need for State](#27-why-we-need-state-in-react)
+28. [How State Works](#28-how-react-state-works)
+29. [Reconciliation & Virtual DOM](#29-what-is-reconciliation--virtual-dom)
+30. [Virtual DOM Misconception](#30-why-virtual-dom-term-is-misleading)
+31. [Derived State](#31-what-is-derived-state)
+32. [Lifting State Up](#32-what-is-lift-state-up-in-react)
+33. [Importance of Keys](#33-why-keys-are-important-in-reactjs)
+34. [Short Circuit Evaluation](#34-what-is-short-circuit-evaluation)
+35. [Rules of Hooks](#35-what-are-react-hook-rules)
+36. [Controlled vs. Uncontrolled Components](#36-what-is-controlled--uncontrolled-components)
+37. [useEffect() Hook](#37-what-is-useeffect-hook)
+38. [useRef() Hook](#38-what-is-useref-hook)
+39. [forwardRef()](#39-what-is-forwardref)
+40. [useId() Hook](#40-what-is-useid)
+41. [Prop Drilling](#41-what-is-prop-drilling)
+42. [Context API](#42-what-is-context-api)
+43. [useReducer() Hook](#43-what-is-usereducer)
+44. [React.memo()](#44-what-is-reactmemo)
+45. [useMemo() Hook](#45-what-is-usememo-hook)
+46. [useMemo() vs React.memo()](#46-when-we-use-usememo-hook-instead-of-reactmemomemo-hook)
+47. [useCallback() Hook](#47-what-is-usecallback-hook)
+48. [Controlled vs Uncontrolled Inputs](#48-what-is-controlled-form-input-vs-uncontrolled-form-input)
+49. [useCallback vs useMemo vs React.memo](#49-what-is-the-difference-between-usecallback-usememo--reactmemo)
+50. [Custom Hooks](#50-what-is-custom-hook)
+51. [use() API](#51-what-is-use-api)
+
+---
 
 ## 1. What is React & Why we use it?
 
@@ -1118,7 +1173,7 @@ It returns an array containing the current state and a dispatch function.
 
 ---
 
-## 44. WHat is React.memo()?
+## 44. What is React.memo()?
 
 - The React.memo function is used for memoization of functional components.
 - If the props of a memoized component have not changed, React skips the rendering for that component, using the cached result instead.
