@@ -7,11 +7,10 @@
 3. [Immer](#3-what-is-immer)
 4. [configureStore & useSelector](#4-how-to-create-or-configure-store--use-useselector-hook-in-rtk)
 5. [createSlice](#5-what-is-createslice)
-6. []()
-7. []()
-8. []()
-9. []()
-10. []()
+6. [Connect RTK with React](#6-how-to-connect-redux-toolkit-with-react)
+7. [Access RTK State using useSelector](#7-access-rtk-state-in-react-using-useselector)
+8. [Dispatch Action](#8-how-to-dispatch-actions)
+9. [Folder Structure](#9-what-is-the-folder-structure-which-redux-or-rtk-tells--used-by-professionals)
 
 ---
 
@@ -90,22 +89,68 @@ A slice is essentially a section of the Redux state, along with the actions & re
 
 ---
 
-## 6.
+## 6. How to Connect Redux Toolkit with React?
+
+To use Redux in a React app, we need to connect Redux's store & actions to React components. This allows components to access the global state & dispatch actions.
+
+- **Step1:** To install react-redux
+
+```
+npm i react-redux
+
+bun add react-redux
+```
+
+- **Step2:**
+  - **Wrap the App with Provider:** Use the Provider component to pass the Redux store to the entire app.
+
+[For Code Part...](./src/main.jsx)
 
 ---
 
-## 7.
+## 7. Access RTK State in React using useSelector?
+
+Use the useSelector hook to read data from the Redux store.
+
+**Syntax:**
+
+```
+const count = useSelector((state)=>state.reducer.property);
+```
+
+**Selector function:** We define a selector function that takes the entire Redux store state as an argument & returns the specific piece of data we need.
+
+[For Code Part...](./src/Pages/Todo.jsx)
 
 ---
 
-## 8.
+## 8. How to Dispatch actions?
+
+Use the useDispatch hook to dispatch actions from a React component.
+
+```
+dispatch(reducerFn(data));
+```
+
+[For Code Part...](./src/Pages/Todo.jsx)
 
 ---
 
-## 9.
+## 9. What is the folder structure which Redux or RTK tells & used by professionals?
 
----
+```
+src
+|-- app
+|    |-- store.js // #Redux Store Configuration.
+|--features
+|   |--tasks
+|       |-- tasksSlice.js // #The Tasks slice
+|       |-- tasksActions.js // #Action creators (optional if needed separately)
+|       |-- tasksSelectors.js // #Selectors (if you have complex selectors)
+|       |-- tasksAPI.js // #Async API Calls (if using RTK Query or other async log)
+|--index.js // # Root entry file
+```
 
-## 10.
+![Folder Structure Demo](./public/Folder-Structure-Demo.png)
 
 ---

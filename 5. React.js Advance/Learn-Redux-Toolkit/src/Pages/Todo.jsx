@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { addTask, deleteTask, fetchData } from "../store";
+import { addTask, clearTask, deleteTask } from "../store";
 
 export const Todo = () => {
   const [task, setTask] = useState("");
 
   //* To get access of the state from store.
   const tasks = useSelector((state) => state.taskReducer.task);
-  //   console.log(tasks);
+  // console.log(tasks);
 
   //* To dispatch or perform action on store like add or delete.
   const dispatch = useDispatch();
@@ -23,9 +23,8 @@ export const Todo = () => {
     dispatch(deleteTask(id));
   };
 
-  //* For Redux Thunk.
-  const handleFetchButton = () => {
-    dispatch(fetchData());
+  const handleClearButton = () => {
+    dispatch(clearTask());
   };
 
   return (
@@ -52,12 +51,6 @@ export const Todo = () => {
               Add Task
             </button>
           </form>
-          <button
-            onClick={handleFetchButton}
-            className="cursor-pointer rounded-2xl bg-[#34d399] px-4 py-3 font-semibold text-neutral-900 selection:text-neutral-300 hover:bg-[#10b981] hover:shadow-[0px_0px_24px_-4px_#10b981]"
-          >
-            Fetch Task
-          </button>
         </div>
         <div>
           <ul className="flex flex-col items-center justify-between space-y-6 text-xl font-semibold text-white">
@@ -77,6 +70,12 @@ export const Todo = () => {
             })}
           </ul>
         </div>
+        <button
+          className={`cursor-pointer rounded-2xl bg-[#f87171] px-4 py-3 font-semibold text-neutral-900 selection:text-neutral-300 hover:bg-[#ef4444] hover:shadow-[0px_0px_24px_-4px_#ef4444] ${tasks.length === 0 ? "hidden" : "block"}`}
+          onClick={handleClearButton}
+        >
+          Clear Task
+        </button>
       </div>
     </div>
   );

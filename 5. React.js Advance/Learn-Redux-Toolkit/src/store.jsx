@@ -1,93 +1,58 @@
-/* eslint-disable no-case-declarations */
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-//* Step1: Create a Reducer Function.
-const ADD_TASK = "task/add";
-const DELETE_TASK = "task/delete";
-const FETCH_TASK = "task/fetch";
+//* Step1: Create a Slice.
+const taskReducer = createSlice({
+  name: "task",
+  initialState: { task: [] },
+  reducers: {
+    addTask(state, action) {
+      state.task.push(action.payload);
+    },
+    deleteTask(state, action) {
+      state.task = state.task.filter(
+        (curTask, index) => index !== action.payload,
+      );
+    },
+    clearTask(state) {
+      state.task = [];
+    },
+  },
+});
 
-const initialState = {
-  task: [],
-};
-
-const taskReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_TASK:
-      return { ...state, task: [...state.task, action.payload] };
-
-    case DELETE_TASK:
-      const updatedTask = state.task.filter((curTask, index) => {
-        return index !== action.payload;
-      });
-      return { ...state, task: updatedTask };
-
-    case FETCH_TASK:
-      return { ...state, task: [...state.task, ...action.payload] };
-
-    default:
-      return state;
-  }
-};
+export const { addTask, deleteTask, clearTask } = taskReducer.actions;
 
 //* Step2: Create the Redux store using reducer.
 export const store = configureStore({
   reducer: {
-    taskReducer, // If the key & value both have same than we can write only one like taskReducer:taskReducer,
+    taskReducer: taskReducer.reducer, // If the key & value both have same than we can write only one like taskReducer:taskReducer,
   },
 });
 
-//* Step3: Log the initial State.
+//* Step3: Log into the initial state.
+// console.log(store.getState());
 
-// console.log("Initial State:", store.getState());
-
-//* Step4: Dispatch an action to add a task.
-store.dispatch({ type: ADD_TASK, payload: "Learn with us" });
-store.dispatch({ type: ADD_TASK, payload: "HTML Completed" });
-store.dispatch({ type: ADD_TASK, payload: "CSS Completed" });
-store.dispatch({ type: ADD_TASK, payload: "Tailwind CSS Completed" });
-store.dispatch({ type: ADD_TASK, payload: "JavaScript Completed" });
-// console.log("Updated State:", store.getState());
-
-store.dispatch({ type: ADD_TASK, payload: "React Completed" });
-// console.log("Updated State:", store.getState());
-
-//? Dispatch an action to delete a task.
-store.dispatch({ type: DELETE_TASK, payload: 1 });
-// console.log("Deleted Task", store.getState());
-
-//* Step6: Create Action Creators.
-
-export const addTask = (data) => {
-  return { type: ADD_TASK, payload: data };
-};
-
-//? How to use this.
-store.dispatch(addTask("Learn React Redux"));
-// console.log("Updated State:", store.getState());
-
-export const deleteTask = (id) => {
-  return { type: DELETE_TASK, payload: id };
-};
-
-store.dispatch(deleteTask(1));
-// console.log("Deleted Task", store.getState());
+//* Step4: Dispatch the action
+store.dispatch(addTask("Buy Mango"));
+store.dispatch(addTask("Buy Apple"));
+store.dispatch(addTask("Buy Orange"));
+store.dispatch(addTask("Buy Papaya"));
 
 //* For Redux Thunk.
-export const fetchData = () => {
-  return async (dispatch) => {
-    try {
-      const res = await fetch(
-        "https://jsonplaceholder.typicode.com/posts?_limit=3"
-      );
-      const data = await res.json();
-      // console.log(data);
+// export const fetchData = () => {
+//   return async (dispatch) => {
+//     try {
+//       const res = await fetch(
+//         "https://jsonplaceholder.typicode.com/posts?_limit=3",
+//       );
+//       const data = await res.json();
+//       // console.log(data);
 
-      dispatch({
-        type: FETCH_TASK,
-        payload: data.map((curElem) => curElem.title),
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-};
+//       dispatch({
+//         type: FETCH_TASK,
+//         payload: data.map((curElem) => curElem.title),
+//       });
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+// };
