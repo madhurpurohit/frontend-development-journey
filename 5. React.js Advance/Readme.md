@@ -19,6 +19,7 @@ Welcome to my React learning repository. This repository serves as a living docu
 11. [Environment & Best Practices](#️-environment--best-practices)
 12. [API Communication with Axios](#-api-communication-with-axios)
 13. [Advanced Server State Management with TanStack Query](#-advanced-server-state-management-with-tanstack-query)
+14. [Client State Management with Redux Toolkit](#-client-state-management-with-redux-toolkit)
 
 ---
 
@@ -213,5 +214,47 @@ I've explored TanStack Query (formerly React Query) to declaratively manage serv
   - **Pagination:** Implemented paginated queries, using `placeholderData` (now `keepPreviousData` in v5) to keep showing old data while new data is being fetched, preventing jarring UI shifts.
 
   - **Infinite Scrolling:** Understood how to use `useInfiniteQuery` to build "load more" or infinite scroll interfaces by fetching data in pages and appending it to the existing data set.
+
+---
+
+## 📦 Client State Management with Redux Toolkit
+
+For complex, global client-side state that needs to be shared across many components, I have learned to use Redux Toolkit, the modern and recommended approach for Redux.
+
+- **Why & When to Use Redux?:** Redux is a predictable state container designed for managing an application's state in a single, global object (the "store"). It becomes necessary when `useState` and `useContext` are insufficient, particularly in large applications where multiple components need to share and manipulate the same state without excessive prop drilling.
+
+- **Redux vs. Redux Toolkit (RTK):**
+
+  - **Redux:** The original library, which is powerful but requires significant boilerplate (actions, action creators, reducers, etc.).
+
+  - **Redux Toolkit (RTK):** The official, opinionated toolset for efficient Redux development. It simplifies store setup, eliminates most boilerplate code, and includes helpful utilities like Immer and Redux Thunk by default. RTK is the standard for all new Redux applications.
+
+- **Core Concepts & Implementation:**
+
+  - **Store:** The single source of truth that holds the entire application's state. I learned to configure it using RTK's `configureStore`.
+
+  - **Reducer:** A pure function `(state, action) => newState` that specifies how the application's state changes in response to actions.
+
+  - **Actions:** Plain JavaScript objects that represent an intention to change the state. In RTK, these are typically generated automatically.
+
+  - **`createSlice`:** RTK's primary API for defining a piece of the state logic. It automatically generates reducers, action creators, and action types from a given name and initial state.
+
+  - **Immer:** RTK uses Immer internally, which allows writing "mutating" logic in reducers (e.g., `state.value = 10`) while ensuring the state remains immutable behind the scenes.
+
+- **Connecting React with Redux:**
+
+  - **Provider:** Wrapped the entire React application with the `<Provider store={store}>` component from `react-redux` to make the Redux store available to all components.
+
+  - **`useSelector()`:** A hook used within React components to read and subscribe to data from the Redux store.
+
+  - **`useDispatch()`:** A hook that provides access to the store's dispatch function, allowing components to dispatch actions and trigger state changes.
+
+- **Handling Asynchronous Logic:**
+
+  - **Redux Thunk:** Understood that Redux Thunk is a middleware that allows writing action creators that return a function instead of an action object. This is the standard way to handle asynchronous logic (like API calls) in Redux. RTK's `createAsyncThunk` API simplifies this process even further.
+
+- **Debugging:**
+
+  - **Redux DevTools:** Learned to use the Redux DevTools browser extension, which provides powerful time-travel debugging, action inspection, and a complete view of the state tree. RTK's `configureStore` enables this automatically.
 
 ---
