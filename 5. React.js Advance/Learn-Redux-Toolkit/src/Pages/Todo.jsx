@@ -7,7 +7,7 @@ export const Todo = () => {
   const [task, setTask] = useState("");
 
   //* To get access of the state from store.
-  const tasks = useSelector((state) => state.task);
+  const tasks = useSelector((state) => state.taskReducer.task);
   //   console.log(tasks);
 
   //* To dispatch or perform action on store like add or delete.
@@ -45,6 +45,8 @@ export const Todo = () => {
               className="flex-1 rounded-2xl border-2 border-transparent bg-neutral-300 px-8 py-3 font-semibold tracking-[0.12rem] text-gray-800 selection:text-neutral-200 placeholder:text-gray-400 focus:border-2 focus:border-sky-600 focus:outline"
               value={task}
               onChange={(e) => setTask(e.target.value)}
+              autoComplete="off"
+              required
             />
             <button className="cursor-pointer rounded-2xl bg-[#34d399] px-4 py-3 font-semibold text-neutral-900 selection:text-neutral-300 hover:bg-[#10b981] hover:shadow-[0px_0px_24px_-4px_#10b981]">
               Add Task

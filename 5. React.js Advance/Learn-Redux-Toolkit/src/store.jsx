@@ -1,7 +1,5 @@
 /* eslint-disable no-case-declarations */
-import { composeWithDevTools } from "@redux-devtools/extension";
-import { applyMiddleware, createStore } from "redux";
-import { thunk } from "redux-thunk";
+import { configureStore } from "@reduxjs/toolkit";
 
 //* Step1: Create a Reducer Function.
 const ADD_TASK = "task/add";
@@ -32,12 +30,11 @@ const taskReducer = (state = initialState, action) => {
 };
 
 //* Step2: Create the Redux store using reducer.
-
-export const store = createStore(
-  taskReducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-);
-// console.log(store);
+export const store = configureStore({
+  reducer: {
+    taskReducer, // If the key & value both have same than we can write only one like taskReducer:taskReducer,
+  },
+});
 
 //* Step3: Log the initial State.
 
@@ -80,7 +77,7 @@ export const fetchData = () => {
   return async (dispatch) => {
     try {
       const res = await fetch(
-        "https://jsonplaceholder.typicode.com/posts?_limit=3",
+        "https://jsonplaceholder.typicode.com/posts?_limit=3"
       );
       const data = await res.json();
       // console.log(data);

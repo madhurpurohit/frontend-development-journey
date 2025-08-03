@@ -168,7 +168,7 @@ const {
   isSuccess,
   isEnabled,
   promise,
-  refetch,
+  refetch, // It will run this useQuery(). Whenever this refetch() calls.
   status,
 } = useQuery(
   {
@@ -196,6 +196,7 @@ const {
     structuralSharing,
     subscribed,
     throwOnError,
+    enabled, // It will by default true.
   },
   queryClient,
 )
@@ -260,7 +261,7 @@ By default, inactive queries are garbage collection after 5 minutes. This means 
 
 - **Stale Data:** After the staleTime duration (specified in milliseconds) elapses, the data is considered stale.
 
-- **Default Value:** The default staleTime is 0, meaning data becomes staLe immediately after being fetched. This ensures data is always up-to-date but can lead to frequent refetching.
+- **Default Value:** The default staleTime is 0, meaning data becomes stale immediately after being fetched. This ensures data is always up-to-date but can lead to frequent refetching.
 
 ---
 
@@ -282,7 +283,7 @@ When we want to fetch the data even in background or we are in another tab.
 
 Here we firstly select those API which support pagination, & if the website doesn't support pagination like jsonplaceholder.typicode.com than we restrict the data like here we restrict the post to load only 3 post. & than we apply pagination here we always use `placeholderData` key in useQuery & pass `keepPreviousData`.
 
-**placeholderData:** placeholderData is a TanStack Query option that lets we show some temporary or "placeholder" data while your actual data is loading (especially useful when changing query parameters like page numbers or filters).
+**placeholderData:** placeholderData is a TanStack Query option that lets we show some temporary or "placeholder" data while our actual data is loading (especially useful when changing query parameters like page numbers or filters).
 
 - ➡️ **Think of it like this:**
 

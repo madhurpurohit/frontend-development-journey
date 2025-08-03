@@ -44,6 +44,8 @@ bun run dev
 bun dev
 ```
 
+[Go to Official Website](https://vite.dev/guide/#scaffolding-your-first-vite-project)
+
 ---
 
 ## Styled-Component
@@ -105,7 +107,7 @@ npm install -D prettier prettier-plugin-tailwindcss
 bun add --dev prettier prettier-plugin-tailwindcss
 ```
 
-- Then add the plugin to your Prettier configuration file:
+- Then add the plugin to your Prettier configuration file, if it doesn't exist than make `.prettierrc.json` file where package.json present & add this below line:
 
 ```
 {
@@ -131,6 +133,12 @@ bun add react-icons
 [React-icons website Link...](https://react-icons.github.io/react-icons/)
 
 ## React-Loading Component
+
+```
+npm i react-loading-indicators
+
+bun add react-loading-indicators
+```
 
 [Visit the website..](https://react-loading-indicators.netlify.app/)
 
@@ -243,7 +251,7 @@ npm i -d @tanstack/react-query-devtools
 bun add --dev @tanstack/react-query-devtools
 ```
 
-[For More Go to Official Website]()
+[For More Go to Official Website](https://tanstack.com/query/v5/docs/framework/react/devtools)
 
 ---
 
@@ -268,5 +276,59 @@ bun add react-redux
 ```
 
 [For More Go to Official Website](https://react-redux.js.org/introduction/getting-started)
+
+---
+
+## Redux DevTools
+
+```
+npm i @redux-devtools/extension
+
+bun add @redux-devtools/extension
+```
+
+[Go to Official Website](https://www.npmjs.com/package/@redux-devtools/extension)
+
+---
+
+## Redux Thunk
+
+```
+npm i redux-thunk
+
+bun add redux-thunk
+```
+
+[Go to Official Website](https://www.npmjs.com/package/redux-thunk)
+
+---
+
+## If we don't get recommendation like TailwindCSS classes, Auto Import etc.
+
+**Step1:** Make a file `jsconfig.json` in our root folder means inside where package.json exist in that folder.
+
+**Step2:** Add this code.
+
+```
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "jsx": "react-jsx"
+  },
+  "include": ["src"]
+}
+```
+
+---
+
+## Redux Toolkit
+
+```
+npm i @reduxjs/toolkit
+
+bun add @reduxjs/toolkit
+```
+
+[Go to Official Website](https://www.npmjs.com/package/@reduxjs/toolkit)
 
 ---

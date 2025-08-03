@@ -11,12 +11,7 @@
 7. [useSelector Hook](#7-access-redux-state-in-react-using-useselector)
 8. [How to Dispatch Actions](#8-how-to-dispatch-actions)
 9. [What is React DevTools](#9-what-is-react-devtools)
-10. []()
-11. []()
-12. []()
-13. []()
-14. []()
-15. []()
+10. [Redux Thunk](#10-what-is-redux-thunk)
 
 ---
 
@@ -114,6 +109,8 @@ function reducer (state=initialState, action){
 
 **Immutable State:** Never directly change the state. Always return a new state object using `...state` to copy the old state.
 
+[For Code Part...](./src/store.jsx)
+
 ---
 
 ## 4. How to create Redux Store?
@@ -142,6 +139,8 @@ store.dispatch({type: "ACTION_TYPE", payload: data});
 
 The getState method is a synchronous function that returns the current state of a Redux application. It includes the entire state of the application, including all the reducers & their respective states.
 
+[For Code Part...](./src/store.jsx)
+
 ---
 
 ## 5. Redux with Action Creators, means How to Create & Dispatch Actions?
@@ -157,6 +156,8 @@ function actionCreators(data) {
     return { type: "ACTION_TYPE", payload: data };
 }
 ```
+
+[For Code Part...](./src/store.jsx)
 
 ---
 
@@ -175,6 +176,8 @@ bun add react-redux
 - **Step2:**
   - **Wrap the App with Provider:** Use the Provider component to pass the Redux store to the entire app.
 
+[For Code Part...](./src/main.jsx)
+
 ---
 
 ## 7. Access Redux State in React using useSelector?
@@ -189,16 +192,47 @@ const count = useSelector((state)=>state.property);
 
 **Selector function:** We define a selector function that takes the entire Redux store state as an argument & returns the specific piece of data we need.
 
+[For Code Part...](./src/Pages/Todo.jsx)
+
 ---
 
 ## 8. How to Dispatch actions?
+
+Use the useDispatch hook to dispatch actions from a React component.
+
+[For Code Part...](./src/Pages/Todo.jsx)
 
 ---
 
 ## 9. What is React DevTools?
 
+It will help us to debug our action, dispatch functionality & more.
+
+**Syntax:**
+
+```
+import { composeWithDevTools } from "@redux-devtools/extension";
+
+export const store = createStore(taskReducer, composeWithDevTools());
+```
+
+[For Code Part...](./src/store.jsx)
+
 ---
 
-## 10.
+## 10. What is Redux Thunk?
+
+Redux Thunk is middleware that allows us to write action creators that return a function instead of an action. This function can perform asynchronous logic (like API requests) & dispatch actions after the operation is complete (e.g. fetching tasks & then dispatching them to store).
+
+When we return a function from an action creator. Redux Thunk provides the dispatch functions as an argument. This allowa us to manually dispatch other actions (e.g. when an API call succeeds or fails).
+
+```
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
+```
+
+[For Code Part...](./src/)
 
 ---
