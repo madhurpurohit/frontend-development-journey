@@ -104,6 +104,8 @@ Use this combo:
 
 [Go to Official Website](https://tanstack.com/query/latest/docs/framework/react/installation)
 
+[For Installation Guide](../Installing-Guide.md)
+
 ---
 
 ## 7. How to add QueryClientProvider?
@@ -412,6 +414,7 @@ For infinite scrolling we use `useInfiniteQuery()` hook. & inside this we have a
 
 ```
 const {
+  data,
   fetchNextPage,
   fetchPreviousPage,
   hasNextPage,

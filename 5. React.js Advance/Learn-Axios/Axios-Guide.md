@@ -51,6 +51,8 @@ const instance = axios.create({
 });
 ```
 
+[For Code Part...](./src/api/PostApi.jsx)
+
 ---
 
 ## 5. How to get data from API using axios?

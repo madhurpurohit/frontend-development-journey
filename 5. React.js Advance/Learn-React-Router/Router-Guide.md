@@ -70,7 +70,7 @@ function App(){
 export default App;
 ```
 
-[For Code Part...](src/App.jsx)
+[For Code Part...](src/CreateBrowserRouter.jsx)
 
 ---
 
@@ -201,6 +201,8 @@ function SomeComponent(){
 }
 ```
 
+[For Code Part...](./src/components/Layout/AppLayout.jsx)
+
 ---
 
 ## 11. How to use & make .env file in Vite+React project?
@@ -212,6 +214,8 @@ function SomeComponent(){
 ## 12. What is Dynamic Routing?
 
 [For Code Part...](src/App.jsx)
+
+[For Code Part...](./src/components/UI/Card.jsx)
 
 [For Code Part...](src/api/GetMovieDetails.jsx)
 

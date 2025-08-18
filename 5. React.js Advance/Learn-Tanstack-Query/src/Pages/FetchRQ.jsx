@@ -40,6 +40,7 @@ export const FetchRQ = () => {
     onSuccess: (data, id) => {
       // console.log(data, id);
       queryClient.setQueryData(["posts", pageNumber], (curPost) => {
+        console.log(curPost);
         return curPost?.filter((post) => post.id !== id);
       });
     },
@@ -51,6 +52,7 @@ export const FetchRQ = () => {
     onSuccess: (apiData, postId) => {
       console.log(apiData, postId);
       queryClient.setQueryData(["posts", pageNumber], (curPost) => {
+        console.log(curPost);
         return curPost?.map((post) => {
           return post.id === postId
             ? { ...post, title: apiData.data.title }

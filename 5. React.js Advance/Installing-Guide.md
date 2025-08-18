@@ -332,3 +332,13 @@ bun add @reduxjs/toolkit
 [Go to Official Website](https://www.npmjs.com/package/@reduxjs/toolkit)
 
 ---
+
+## Tabler icons-react
+
+```
+npm i @tabler/icons-react
+
+bun i @tabler/icons-react
+```
+
+[Go to Official Website](https://tabler.io/icons) 

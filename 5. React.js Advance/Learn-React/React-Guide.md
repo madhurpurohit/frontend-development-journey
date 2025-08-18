@@ -22,7 +22,7 @@ hook.jsx File Flow Structure.
 8. [JSX](#8-what-is-jsx)
 9. [Dynamic Values in JSX](#9-how-to-take-any-dynamic-value-like-variable-object-function-expressions-etc)
 10. [Conditional Rendering](#10-how-to-take-conditional-values-in-jsx)
-11. [JSX Output Quirks](#11-what-is-the-output-of-this-given-jsx)
+11. [JSX Output Quiz](#11-what-is-the-output-of-this-given-jsx)
 12. [Export & Import Types](#12-how-many-types-we-can-export--import)
 13. [Looping & Keys in JSX](#13-looping-in-jsx-why-we-use-key-attributeprop)
 14. [Props](#14-what-is-props--how-to-use-it-or-pass-it-in-jsx)
@@ -693,6 +693,7 @@ We can also use inline styles similar to without React.js.
 
 ```
 <div className={styles['card-content’]}>
+<div className={`${styles['card-content’]} ${rating_user}`}>
 ```
 
 **Explanation:**
@@ -701,13 +702,15 @@ We can also use inline styles similar to without React.js.
 - Dot Notation: styles.card-content will not work because . expects a valid JavaScript identifier, which cannot contain hyphens.
 - Bracket Notation: styles['card-content'] correctly accesses the class name from the imported styles object.
 
+[For Code Part...](./src/Topics/CSSModule.jsx)
+
 ---
 
 ## 21. What is Styled Component?
 
 A CSS-in-JS library to write CSS inside components.
 
-[Install Styled Component](./Installing-Guide.md)
+[Install Styled Component](../Installing-Guide.md)
 
 1. **Using Template Literals :-**
 
@@ -729,6 +732,8 @@ const Button = styled.button({
 
 - This is a styled component, which is a React component created using styled-components. It is both a React component and a styled component. As a React component, it can be used in JSX. As a styled component, it has styles directly attached to it.
 - styled is an object provided by the library, and button is a method on that object.
+
+[For Code Part...](./src/Topics/StyledComponent.jsx)
 
 ---
 
@@ -891,7 +896,7 @@ In React, state is a way to store and manage data that can change over the lifet
 
 - Read React.js 2025 PDF from page no. 95-100.
 
-[PDF Link](./React.js%202025%20Course%20Full%20Notes.pdf)
+[PDF Link](../React.js%202025_Full%20Notes_.pdf)
 
 ---
 
@@ -915,7 +920,7 @@ Derived state is any state that can be computed based on other state or props. I
 
 Read PDF page no. 103-109.
 
-[PDF Link](./React.js%202025%20Course%20Full%20Notes.pdf)
+[PDF Link](../React.js%202025_Full%20Notes_.pdf)
 
 ---
 
@@ -933,7 +938,7 @@ Read PDF page no. 103-109.
 
 [For Code File ...](./src/Topics/Keys.jsx)
 
-[For PDF ...](./React.js%202025%20Course%20Full%20Notes.pdf) Page No. 126-139
+[PDF Link](../React.js%202025_Full%20Notes_.pdf) Page No. 126-139
 
 ---
 
@@ -1183,7 +1188,9 @@ OR
 
 React.memo() is a higher-order component that we can use to wrap components that we do not want to re-render unless props within them change
 
-[For Code ...](./src/Topics/Hooks/ReactMemo/ReactMemoHook.jsx)
+[For First Code ...](./src/Topics/Hooks/ReactMemo/ReactMemoHook.jsx)
+
+[For Second Code Use React.Memo ...](./src/Topics/Hooks/ReactMemo/MemoCount.jsx)
 
 ---
 
