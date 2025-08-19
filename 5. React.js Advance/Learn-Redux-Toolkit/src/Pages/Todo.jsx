@@ -7,7 +7,7 @@ export const Todo = () => {
   const [task, setTask] = useState("");
 
   //* To get access of the state from store.
-  const tasks = useSelector((state) => state.taskReducer.task);
+  const tasks = useSelector((state) => state.taskReducer.task); // It will give us the state from the global stores.
   // console.log(tasks);
 
   //* To dispatch or perform action on store like add or delete.
