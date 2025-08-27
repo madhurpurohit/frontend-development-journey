@@ -58,7 +58,7 @@ This project aims to replicate some of the key features of the Swiggy app using 
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/swiggy-clone.git`
+1. Clone the repository:
 2. Install dependencies: `npm install` or `bun install`
 3. Start the development server: `npm run dev` or `bun dev`
 
@@ -86,7 +86,7 @@ https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&la
 
 ---
 
-- Fork the repository: `git clone https://github.com/your-username/swiggy-clone.git`
+- Fork the repository:
 - Create a new branch: `git checkout -b my-branch`
 - Make your changes
 - Commit your changes: `git commit -m "Add new feature"`
