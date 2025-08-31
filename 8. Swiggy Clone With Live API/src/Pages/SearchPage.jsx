@@ -57,7 +57,7 @@ export default function SearchPage() {
         <div className="relative container mx-auto mt-5 max-w-200 pb-12">
           <div className="sticky top-0 z-2 flex h-13 items-center border-b border-[#02060c1a] pr-4 text-black">
             <FiArrowLeft
-              className="m-4 text-2xl cursor-pointer"
+              className="m-4 cursor-pointer text-2xl"
               onClick={() => navigate(-1)}
             />
             <form className="h-full w-full">
@@ -77,9 +77,9 @@ export default function SearchPage() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-5 max-w-[800px]">
+      <div className="container mx-auto mt-5 flex max-w-[800px] flex-col">
         <div className="mx-4 mb-4 pl-3">
-          {input.length > 1 && info.length !== 0 ? (
+          {input.length > 1 && info?.length !== 0 ? (
             info?.map((curElem, index, arr) => {
               return (
                 <SubDishMenu

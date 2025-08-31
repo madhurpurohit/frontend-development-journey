@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { nonVegIcon, vegIcon } from "../assets/icons";
+import { hrLine, nonVegIcon, vegIcon } from "../assets/icons";
 import { CartHeader } from "../components/layout/CartHeader";
 import { decrementItem, incrementItem } from "../context/cartSlice";
 
@@ -22,9 +22,9 @@ export const Checkout = () => {
           ohh no!! you haven't add any item yet, please add item to buy.
         </div>
       ) : (
-        <div className="flex h-[calc(100vh-64px)] w-full items-center justify-center bg-[#E9ECEE] p-4 sm:p-9">
-          <div className="container mx-auto flex h-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white shadow-sm">
-            <div className="flex-grow overflow-y-auto p-4 sm:p-8">
+        <div className="flex h-[calc(100vh-64px)] w-full flex-col bg-[#E9ECEE] p-4 sm:p-9">
+          <div className="container mx-auto flex h-full max-w-3xl flex-col overflow-hidden rounded-3xl bg-white shadow-sm">
+            <div className="flex flex-grow flex-col justify-between overflow-y-auto p-4 sm:p-8">
               <div className="flex flex-col gap-6">
                 {items?.map((curElem) => {
                   return (
@@ -69,6 +69,56 @@ export const Checkout = () => {
                     </div>
                   );
                 })}
+              </div>
+              <div>
+                {hrLine}
+                <div className="mx-auto flex max-w-[40%] flex-col">
+                  <div className="mb-3 text-sm font-bold text-black">
+                    Bill Details
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div>Item Total</div>
+                    <div>
+                      &#8377;{" "}
+                      {items?.length !== 0
+                        ? items?.reduce(
+                            (acc, curElem) =>
+                              acc +
+                              ((curElem?.defaultPrice || curElem?.price) *
+                                curElem?.quantity) /
+                                100,
+                            0,
+                          )
+                        : 0}
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div>Delivery Fees</div>
+                    <div>&#8377; 60</div>
+                  </div>
+                  {hrLine}
+                  <div className="-mt-5 flex items-center justify-between text-lg font-bold text-black">
+                    <div>Total</div>
+                    <div>
+                      &#8377;{" "}
+                      {items?.length !== 0
+                        ? items?.reduce(
+                            (acc, curElem) =>
+                              acc +
+                              ((curElem?.defaultPrice || curElem?.price) *
+                                curElem?.quantity) /
+                                100,
+                            0,
+                          ) + 60
+                        : 0}
+                    </div>
+                  </div>
+                  <div className="mt-3 flex items-center justify-center">
+                    <div className="cursor-pointer rounded-lg bg-gray-300 px-6 py-3 text-lg font-semibold text-neutral-700 shadow-lg transition-all duration-200 hover:scale-[0.9] hover:bg-gray-400 hover:text-neutral-950">
+                      Buy Items
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
