@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generator Function</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-60px);
+        background: #222;
+        color: #fff;
+      }
+      button {
+        display: block;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        border: 1px solid #777;
+        letter-spacing: 0.04rem;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Generator Function</h1>
+    <button id="next-btn">Yield(next)</button>
+    <button id="reset-btn" style="display: none; margin-top: 10px">
+      Reset
+    </button>
+
+    <script>
+      const btn = document.getElementById("next-btn");
+      const resetBtn = document.getElementById("reset-btn");
+
+      function* iterator(start, end, step) {
+        for (let i = start; i <= end; i += step) {
+          yield i;
+        }
+      }
+
+      const result = iterator(1, 10, 1);
+
+      btn.addEventListener("click", () => {
+        btn.innerText = result.next().value;
+        if (btn.innerText === "undefined") {
+          btn.setAttribute("disabled", "true");
+          resetBtn.style.display = "block";
+        }
+      });
+
+      resetBtn.addEventListener("click", () => {
+        window.location.reload();
+        resetBtn.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

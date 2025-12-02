@@ -27,7 +27,7 @@ Array.prototype.heyDevFlux = function () {
 // myHero.heyDevFlux()
 // heroPower.heyDevFlux()
 
-// inheritance
+//* Inheritance
 
 const User = {
   name: "Coffee",
@@ -50,7 +50,7 @@ const TASupport = {
 
 Teacher.__proto__ = User;
 
-// modern syntax
+//todo Modern syntax:-
 Object.setPrototypeOf(TeachingSupport, Teacher);
 
 let anotherUsername = "MakeACoffee     ";

@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/**
+ ** We use the @custom-variant directive to define a custom variant that allows us to target elements with the class "dark" and its descendants.
+
+ *! What it does:
+ ** It creates a utility class that we can use in our CSS to target elements with the class "dark" and its descendants.
+ ** For example, we can use the class "dark:text-white" to set the text color to white for elements with the class "dark".
+ 
+ *todo What happens if we don't use it:
+ ** We wouldn't be able to target elements with the class "dark" and its descendants in our CSS, making it harder to style them.
+*/
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* --- CUSTOM ANIMATIONS ---
+    Industry Standard: Define the animation behavior and the keyframes 
+    inside the @theme block. Tailwind v4 automatically creates the 
+    utility classes: 'animate-infinite-scroll' and 'animate-simple-marquee'.
+  */
+
+  /* 1. The Seamless Loop (High Performance) */
+  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+
+  /* 2. The Standard Marquee (Linear Transit) */
+  --animate-simple-marquee: simple-marquee 15s linear infinite;
+
+  /* --- KEYFRAMES DEFINITIONS --- */
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes simple-marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+/* --- GLOBAL STYLES ---
+  Best Practice: Handle global transitions in the base layer 
+  so you don't repeat them in every component.
+*/
+@layer base {
+  body {
+    @apply transition-colors duration-500 ease-in-out bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100;
+  }
+}

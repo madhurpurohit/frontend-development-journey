@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttling in JS</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transform: translateY(-60px);
+        background: #222;
+        color: #fff;
+      }
+      h1 {
+        text-align: center;
+      }
+      input {
+        display: block;
+        padding: 10px;
+        width: 400px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        border: 1px solid #777;
+        letter-spacing: 0.04rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Throttling</h1>
+      <input
+        type="text"
+        name="search"
+        placeholder="Search here"
+        autocomplete="off"
+        id="search"
+      />
+    </div>
+
+    <h2>Count: <span>0</span></h2>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

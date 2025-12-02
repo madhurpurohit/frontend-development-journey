@@ -1,4 +1,4 @@
-//* Object literals.
+//* Object literals:- It means a normal object, because in JS object is the basic unit of everything.
 
 // let user = {
 //   username: "DevFlux",
@@ -37,3 +37,12 @@ let userOne = new User("DevFlux", 10, true);
 let userTwo = new User("MP", 15, false);
 console.log(userOne);
 console.log(userTwo);
+
+//! The above code works in 4 steps:-
+//* Step1:- Firstly it will create an empty object.
+//* Step2:- Than it will call the constructor function, because of new keyword. This will wrap all the arguments & return the object.
+//* Step3:- Than because of this keyword all the arguments or values are injected.
+//* Step4:- Than it will return the object inside function.
+
+//! What is constructor?
+console.log(userOne.constructor); // It will give "Function: [User]" this output. Because constructor is a reference of us means in this it is a reference of User function.
