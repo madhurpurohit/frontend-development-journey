@@ -32,7 +32,7 @@ Thumbs.db       # Windows
 *.swo
 
 # Development Tools
-.vscode/        # VS Code settings
+.vscode        # VS Code settings
 .idea/          # JetBrains IDEs
 *.sublime-*     # Sublime Text
 *.eslintcache
